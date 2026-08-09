@@ -3298,7 +3298,7 @@ textarea:focus-visible {
    PHONE LANDSCAPE HERO
 ========================= */
 
-@media (orientation: landscape) and (max-height: 550px) {
+@media (max-width: 950px) and (max-height: 700px) {
 
     .hero-media,
     .hero-artwork {
@@ -3306,12 +3306,16 @@ textarea:focus-visible {
     }
 
     .hero-grid {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
+        grid-template-columns:
+            1fr !important;
+
+        gap:
+            0 !important;
     }
 
     .hero {
-        min-height: auto !important;
+        min-height:
+            auto !important;
 
         padding-top:
             55px;
@@ -3321,12 +3325,11 @@ textarea:focus-visible {
     }
 
     .hero-content {
-        width: 100%;
+        width:
+            100%;
     }
 
 }
-
-
 
 /* =========================
    REDUCED MOTION
