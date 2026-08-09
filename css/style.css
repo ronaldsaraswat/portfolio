@@ -2040,7 +2040,7 @@ button:focus-visible {
     font-size: 0.78rem;
 }
 
-.site-footer div {
+.footer-identity {
     display: flex;
 
     align-items: center;
@@ -2048,7 +2048,7 @@ button:focus-visible {
     gap: 14px;
 }
 
-.site-footer strong {
+.footer-identity strong {
     display: grid;
 
     place-items: center;
@@ -2067,8 +2067,39 @@ button:focus-visible {
     font-size: 0.65rem;
 }
 
-.site-footer p {
+.footer-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.footer-links a {
+    color:
+        rgba(255, 255, 255, 0.62);
+
+    font-size: 0.76rem;
+    font-weight: 600;
+
+    transition:
+        color 180ms ease;
+}
+
+.footer-links a:hover {
+    color:
+        var(--publication-accent-light);
+}
+
+.footer-label {
     margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.5);
 }
 
 
@@ -2487,21 +2518,28 @@ button:focus-visible {
         max-width:
             100%;
     }
-    /* MOBILE FOOTER */
 
-    .site-footer {
-        min-height: 130px;
+   /* MOBILE FOOTER */
 
-        flex-direction:
-            column;
+.site-footer {
+    min-height: auto;
 
-        align-items:
-            flex-start;
+    flex-direction: column;
 
-        justify-content:
-            center;
-    }
+    align-items: flex-start;
 
+    justify-content: center;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.footer-links {
+    justify-content: flex-start;
+
+    gap:
+        12px
+        18px;
 }
 
 
