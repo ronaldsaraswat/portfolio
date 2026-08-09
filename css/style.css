@@ -769,28 +769,50 @@ button:focus-visible {
     font-size: 0.95rem;
 }
 
+
 /* =========================
    ABOUT PORTRAIT
 ========================= */
 
-.about-content {
-    display: grid;
-
+.about-grid {
     grid-template-columns:
-        minmax(220px, 0.65fr)
-        minmax(0, 1.35fr);
-
-    gap:
-        clamp(35px, 5vw, 65px);
+        minmax(300px, 0.8fr)
+        minmax(0, 1.2fr);
 
     align-items:
         start;
 }
 
-.about-portrait {
-    margin: 0;
+.about-left {
+    display:
+        flex;
 
-    overflow: hidden;
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+}
+
+.about-left .section-heading {
+    width:
+        100%;
+}
+
+.about-portrait {
+    width:
+        100%;
+
+    max-width:
+        430px;
+
+    margin:
+        55px
+        0
+        0;
+
+    overflow:
+        hidden;
 
     border-radius:
         var(--radius-medium);
@@ -803,12 +825,17 @@ button:focus-visible {
 }
 
 .about-portrait img {
-    width: 100%;
+    display:
+        block;
+
+    width:
+        100%;
 
     aspect-ratio:
         3 / 4;
 
-    object-fit: cover;
+    object-fit:
+        cover;
 
     object-position:
         center;
@@ -823,7 +850,8 @@ button:focus-visible {
 }
 
 .about-copy {
-    min-width: 0;
+    min-width:
+        0;
 }
 
 .about-copy > p {
@@ -841,7 +869,6 @@ button:focus-visible {
     color:
         var(--text-primary) !important;
 }
-
 
 
 /* =========================
