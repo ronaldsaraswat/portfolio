@@ -1292,7 +1292,6 @@ button:focus-visible {
     font-size: 0.9rem;
 }
 
-
 /* =========================
    SCIENCE COMMUNICATION
 ========================= */
@@ -1345,7 +1344,7 @@ button:focus-visible {
     line-height: 1.08;
 }
 
-.communication-feature > p:last-child {
+.communication-feature > p:not(.eyebrow) {
     max-width: 620px;
 
     color:
@@ -1356,6 +1355,41 @@ button:focus-visible {
     line-height: 1.8;
 }
 
+.communication-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 34px;
+}
+
+.communication-meta span {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        8px
+        13px;
+
+    border:
+        1px solid
+        rgba(49, 92, 89, 0.2);
+
+    border-radius:
+        50px;
+
+    background:
+        rgba(255, 255, 255, 0.35);
+
+    color:
+        var(--accent-dark);
+
+    font-size: 0.74rem;
+    font-weight: 650;
+}
 
 /* =========================
    CV / ACTIVITIES
