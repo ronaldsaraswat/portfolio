@@ -1153,50 +1153,210 @@
 
             <div class="contact-inner">
 
-                <p class="section-number">
-                    08
-                </p>
+                <div class="contact-header">
 
-                <h2>
-                    Research.
-                    Collaboration.
-                    Scientific conversation.
-                </h2>
+                    <p class="section-number">
+                        08
+                    </p>
 
-                <p>
-                    For research opportunities, collaborations,
-                    scientific communication or professional
-                    enquiries.
-                </p>
+                    <h2>
+                        Research.
+                        Collaboration.
+                        Scientific conversation.
+                    </h2>
 
-                <div class="contact-links">
-
-                    <a href="#">
-                        Email
-                    </a>
-
-                    <a href="#">
-                        LinkedIn
-                    </a>
-
-                    <a href="#">
-                        ORCID
-                    </a>
+                    <p class="contact-intro">
+                        For research opportunities, scientific
+                        collaborations, science communication or
+                        professional enquiries, send me a message
+                        using the form below.
+                    </p>
 
                 </div>
 
-                <p class="temporary-note">
-                    Contact links will be activated after
-                    verification.
-                </p>
+
+                <div class="contact-layout">
+
+
+                    <!-- CONTACT FORM -->
+
+                    <form
+                        class="contact-form"
+                        action="https://formspree.io/f/mwlevjrv"
+                        method="POST"
+                    >
+
+                        <div class="form-row">
+
+                            <div class="form-field">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="organisation">
+                                Organisation / Institution
+                                <span>Optional</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="organisation"
+                                name="organisation"
+                                autocomplete="organization"
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="7"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- SPAM-PROTECTION HONEYPOT -->
+
+                        <div
+                            class="form-honeypot"
+                            aria-hidden="true"
+                        >
+
+                            <label for="website">
+                                Leave this field empty
+                            </label>
+
+                            <input
+                                type="text"
+                                id="website"
+                                name="_gotcha"
+                                tabindex="-1"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <button
+                            class="form-submit"
+                            type="submit"
+                        >
+                            Send message
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+                    </form>
+
+
+                    <!-- SCIENTIFIC PROFILES -->
+
+                    <aside class="contact-profiles">
+
+                        <p class="contact-profiles-label">
+                            Scientific profiles
+                        </p>
+
+                        <a
+                            href="https://www.linkedin.com/in/ronaldsaraswat/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>
+                                LinkedIn
+                            </span>
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+                        </a>
+
+
+                        <a
+                            href="https://orcid.org/0000-0003-4049-1273"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>
+                                ORCID
+                            </span>
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+                        </a>
+
+
+                        <p class="contact-privacy">
+                            Messages submitted through this form
+                            are processed securely by Formspree
+                            for delivery.
+                        </p>
+
+                    </aside>
+
+                </div>
 
             </div>
 
         </section>
-
-
-    </main>
-
 
     <!-- =========================
          FOOTER
