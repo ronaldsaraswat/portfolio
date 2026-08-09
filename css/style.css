@@ -2601,20 +2601,6 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 
-    .research-feature-header {
-        grid-template-columns:
-            1fr;
-
-        gap:
-            24px;
-    }
-
-    .research-feature-header > p {
-        max-width:
-            700px;
-    }
-
-
 /* =========================
    MOBILE
 ========================= */
@@ -2819,34 +2805,83 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .research-feature-header {
-        grid-template-columns:
-            1fr;
-
-        gap:
-            24px;
+        max-width:
+            100%;
 
         margin-bottom:
             30px;
+
+        text-align:
+            center;
+    }
+
+    .research-feature-header .eyebrow {
+        margin-bottom:
+            15px;
     }
 
     .research-feature-header h3 {
+        max-width:
+            100%;
+
         font-size:
             clamp(1.8rem, 8vw, 2.7rem);
+
+        line-height:
+            1.12;
+    }
+
+    .research-feature-header > p {
+        max-width:
+            100%;
+
+        margin-top:
+            20px;
+
+        font-size:
+            0.92rem;
+
+        line-height:
+            1.7;
+    }
+
+    .research-feature-image {
+        border-radius:
+            14px;
     }
 
     .research-feature figcaption {
-        flex-direction:
-            column;
+        justify-content:
+            center;
 
         align-items:
-            flex-start;
+            center;
+
+        flex-direction:
+            row;
+
+        flex-wrap:
+            wrap;
 
         gap:
-            5px;
+            6px;
+
+        margin-top:
+            14px;
+
+        text-align:
+            center;
+
+        font-size:
+            0.72rem;
+    }
+
+    .research-feature figcaption span::after {
+        margin-left:
+            6px;
     }
 
    
-
     /* MOBILE EXPERIENCE */
 
     .timeline-item {
