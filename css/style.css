@@ -919,6 +919,88 @@ textarea:focus-visible {
 
 
 /* =========================
+   DOCTORAL CREDENTIAL
+========================= */
+
+.doctoral-credential {
+    margin:
+        0
+        0
+        38px;
+
+    padding:
+        22px
+        24px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    gap:
+        6px;
+
+    border-left:
+        3px solid
+        var(--accent);
+
+    border-radius:
+        0
+        var(--radius-small)
+        var(--radius-small)
+        0;
+
+    background:
+        var(--accent-soft);
+}
+
+.doctoral-credential-label {
+    color:
+        var(--accent);
+
+    font-size:
+        0.70rem;
+
+    font-weight:
+        750;
+
+    letter-spacing:
+        0.12em;
+
+    text-transform:
+        uppercase;
+}
+
+.doctoral-credential strong {
+    color:
+        var(--text-primary);
+
+    font-size:
+        1rem;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.45;
+}
+
+.doctoral-credential-meta {
+    color:
+        var(--text-secondary);
+
+    font-size:
+        0.80rem;
+
+    line-height:
+        1.5;
+}
+
+/* =========================
    RESEARCH CARDS
 ========================= */
 
@@ -3011,6 +3093,23 @@ textarea:focus-visible {
 ========================= */
 
 @media (max-width: 600px) {
+
+    /* MOBILE DOCTORAL CREDENTIAL */
+
+    .doctoral-credential {
+
+        padding:
+
+            19px
+
+            20px;
+
+        margin-bottom:
+
+            32px;
+
+    }
+{
 
     .hero {
         width:
