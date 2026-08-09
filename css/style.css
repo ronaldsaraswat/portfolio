@@ -1131,6 +1131,79 @@ button:focus-visible {
         0.03em;
 }
 
+/* COMPLETE PUBLICATION RECORD */
+
+.publications-footer {
+    display: flex;
+
+    justify-content: flex-start;
+
+    margin-top: 46px;
+}
+
+.publication-record-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    border:
+        1px solid
+        var(--publication-accent);
+
+    border-radius: 50px;
+
+    background:
+        var(--publication-accent);
+
+    color:
+        var(--dark);
+
+    font-size: 0.8rem;
+
+    font-weight: 750;
+
+    transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.publication-record-link span:last-child {
+    font-size: 1rem;
+
+    transition:
+        transform 180ms ease;
+}
+
+.publication-record-link:hover {
+    background:
+        var(--publication-accent-light);
+
+    border-color:
+        var(--publication-accent-light);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 26px
+        rgba(0, 0, 0, 0.18);
+}
+
+.publication-record-link:hover span:last-child {
+    transform:
+        translateX(3px);
+}
+
 
 /* =========================
    PUBLICATION CTA
@@ -2419,6 +2492,13 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
             17px;
     }
 
+   .publications-footer {
+    margin-top: 36px;
+}
+
+.publication-record-link {
+    width: 100%;
+}
 
     /* MOBILE EXPERTISE */
 
@@ -2517,28 +2597,29 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
         max-width:
             100%;
     }
+    /* MOBILE FOOTER */
 
-   /* MOBILE FOOTER */
+    .site-footer {
+        min-height: auto;
 
-.site-footer {
-    min-height: auto;
+        flex-direction: column;
 
-    flex-direction: column;
+        align-items: flex-start;
 
-    align-items: flex-start;
+        justify-content: center;
 
-    justify-content: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
+    .footer-links {
+        justify-content: flex-start;
 
-.footer-links {
-    justify-content: flex-start;
+        gap:
+            12px
+            18px;
+    }
 
-    gap:
-        12px
-        18px;
 }
 
 
@@ -2546,9 +2627,7 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
    REDUCED MOTION
 ========================= */
 
-@media (
-    prefers-reduced-motion: reduce
-) {
+@media (prefers-reduced-motion: reduce) {
 
     html {
         scroll-behavior: auto;
