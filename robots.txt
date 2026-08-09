@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ronald.saraswatintegratedservices.com/sitemap.xml
