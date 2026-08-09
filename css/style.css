@@ -3097,19 +3097,16 @@ textarea:focus-visible {
     /* MOBILE DOCTORAL CREDENTIAL */
 
     .doctoral-credential {
-
         padding:
-
             19px
-
             20px;
 
         margin-bottom:
-
             32px;
-
     }
-{
+
+
+    /* PHONE HERO — TEXT FIRST */
 
     .hero {
         width:
@@ -3117,6 +3114,19 @@ textarea:focus-visible {
 
         padding-top:
             70px;
+
+        padding-bottom:
+            80px;
+    }
+
+    .hero-grid {
+        gap:
+            0;
+    }
+
+    .hero-media {
+        display:
+            none !important;
     }
 
     .eyebrow {
@@ -3189,18 +3199,8 @@ textarea:focus-visible {
             0.82rem;
     }
 
-    .hero-media {
-        margin-top:
-            6px;
-    }
 
-    .hero-artwork {
-        height:
-            min(62vh, 500px);
-
-        max-height:
-            500px;
-    }
+    /* MOBILE SECTION HEADINGS */
 
     .section-heading h2,
     .section-header h2,
@@ -3208,6 +3208,9 @@ textarea:focus-visible {
         font-size:
             clamp(2.5rem, 12vw, 4rem);
     }
+
+
+    /* MOBILE FEATURED RESEARCH */
 
     .research-feature {
         margin-top:
@@ -3250,6 +3253,9 @@ textarea:focus-visible {
         font-size:
             0.72rem;
     }
+
+
+    /* MOBILE FORM */
 
     .form-row {
         grid-template-columns:
