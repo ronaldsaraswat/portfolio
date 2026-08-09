@@ -2426,12 +2426,21 @@ button:focus-visible {
             52px;
     }
 
-    .contact-profiles {
-        padding-top:
-            0;
-    }
+.contact-profiles {
+    padding-top:
+        0;
 
-    .contact-privacy {
+    grid-template-columns:
+        1fr;
+}
+
+.contact-profiles-label,
+.contact-privacy {
+    grid-column:
+        1;
+}
+
+.contact-privacy {
         max-width:
             100%;
     }
