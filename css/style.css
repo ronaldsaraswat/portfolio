@@ -29,7 +29,8 @@
     --radius-large: 32px;
 
     --shadow:
-        0 20px 50px rgba(21, 36, 38, 0.08);
+        0 20px 50px
+        rgba(21, 36, 38, 0.08);
 }
 
 
@@ -56,13 +57,17 @@ body {
         Arial,
         sans-serif;
 
-    background: var(--background);
+    background:
+        var(--background);
 
-    color: var(--text-primary);
+    color:
+        var(--text-primary);
 
-    line-height: 1.6;
+    line-height:
+        1.6;
 
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing:
+        antialiased;
 }
 
 body.menu-open {
@@ -71,6 +76,7 @@ body.menu-open {
 
 a {
     color: inherit;
+
     text-decoration: none;
 }
 
@@ -80,6 +86,7 @@ button {
 
 img {
     display: block;
+
     max-width: 100%;
 }
 
@@ -88,7 +95,8 @@ p {
 }
 
 section {
-    scroll-margin-top: 90px;
+    scroll-margin-top:
+        90px;
 }
 
 
@@ -99,9 +107,11 @@ section {
 a:focus-visible,
 button:focus-visible {
     outline:
-        2px solid var(--accent);
+        2px solid
+        var(--accent);
 
-    outline-offset: 4px;
+    outline-offset:
+        4px;
 }
 
 
@@ -121,14 +131,19 @@ button:focus-visible {
         12px
         18px;
 
-    background: var(--dark);
-    color: #ffffff;
+    background:
+        var(--dark);
 
-    border-radius: 8px;
+    color:
+        #ffffff;
+
+    border-radius:
+        8px;
 }
 
 .skip-link:focus {
-    top: 20px;
+    top:
+        20px;
 }
 
 
@@ -146,8 +161,11 @@ button:focus-visible {
     background:
         rgba(243, 244, 240, 0.88);
 
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
 
     border-bottom:
         1px solid
@@ -158,39 +176,58 @@ button:focus-visible {
     width:
         min(92%, var(--content-width));
 
-    height: 78px;
+    height:
+        78px;
 
     margin:
         0 auto;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
-    justify-content: space-between;
+    align-items:
+        center;
 
-    gap: 40px;
+    justify-content:
+        space-between;
+
+    gap:
+        40px;
 }
 
 .brand {
-    width: 44px;
-    height: 44px;
+    width:
+        44px;
 
-    display: grid;
-    place-items: center;
+    height:
+        44px;
 
-    flex-shrink: 0;
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    flex-shrink:
+        0;
 
     background:
         var(--text-primary);
 
-    color: #ffffff;
+    color:
+        #ffffff;
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
-    font-size: 0.86rem;
-    font-weight: 700;
+    font-size:
+        0.86rem;
 
-    letter-spacing: 0.08em;
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.08em;
 
     transition:
         background 180ms ease,
@@ -206,19 +243,25 @@ button:focus-visible {
 }
 
 .site-nav {
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
     gap:
         clamp(18px, 2vw, 32px);
 
-    font-size: 0.83rem;
-    font-weight: 550;
+    font-size:
+        0.83rem;
+
+    font-weight:
+        550;
 }
 
 .site-nav a {
-    position: relative;
+    position:
+        relative;
 
     color:
         var(--text-secondary);
@@ -230,13 +273,20 @@ button:focus-visible {
 .site-nav a::after {
     content: "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    left: 0;
-    bottom: -7px;
+    left:
+        0;
 
-    width: 100%;
-    height: 1px;
+    bottom:
+        -7px;
+
+    width:
+        100%;
+
+    height:
+        1px;
 
     background:
         var(--text-primary);
@@ -265,26 +315,37 @@ button:focus-visible {
 }
 
 .menu-toggle {
-    display: none;
+    display:
+        none;
 
-    width: 46px;
-    height: 46px;
+    width:
+        46px;
 
-    padding: 0;
+    height:
+        46px;
 
-    border: 0;
+    padding:
+        0;
+
+    border:
+        0;
 
     background:
         transparent;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 }
 
 .menu-toggle span {
-    display: block;
+    display:
+        block;
 
-    width: 22px;
-    height: 1.5px;
+    width:
+        22px;
+
+    height:
+        1.5px;
 
     margin:
         6px auto;
@@ -311,17 +372,24 @@ button:focus-visible {
     margin:
         0 auto;
 
-    display: flex;
-    align-items: center;
+    display:
+        flex;
+
+    align-items:
+        center;
 
     padding:
-        90px 0 110px;
+        90px
+        0
+        110px;
 }
 
 .hero-grid {
-    width: 100%;
+    width:
+        100%;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         minmax(0, 1.35fr)
@@ -330,7 +398,8 @@ button:focus-visible {
     gap:
         clamp(60px, 8vw, 120px);
 
-    align-items: center;
+    align-items:
+        center;
 }
 
 .eyebrow {
@@ -340,16 +409,22 @@ button:focus-visible {
     color:
         var(--accent);
 
-    font-size: 0.78rem;
-    font-weight: 700;
+    font-size:
+        0.78rem;
 
-    letter-spacing: 0.16em;
+    font-weight:
+        700;
 
-    text-transform: uppercase;
+    letter-spacing:
+        0.16em;
+
+    text-transform:
+        uppercase;
 }
 
 .hero h1 {
-    max-width: 850px;
+    max-width:
+        850px;
 
     margin:
         0
@@ -359,23 +434,27 @@ button:focus-visible {
     font-size:
         clamp(3.6rem, 7vw, 7.3rem);
 
-    font-weight: 650;
+    font-weight:
+        650;
 
     letter-spacing:
         -0.06em;
 
-    line-height: 0.92;
+    line-height:
+        0.92;
 }
 
 .hero h1 span {
     color:
         var(--accent);
 
-    white-space: nowrap;
+    white-space:
+        nowrap;
 }
 
 .hero-statement {
-    max-width: 780px;
+    max-width:
+        780px;
 
     margin-bottom:
         34px;
@@ -386,19 +465,28 @@ button:focus-visible {
     font-size:
         clamp(1.35rem, 2.35vw, 2rem);
 
-    line-height: 1.38;
+    line-height:
+        1.38;
 
     letter-spacing:
         -0.025em;
 }
 
+
+/* HERO TAGS */
+
 .research-tags {
-    max-width: 780px;
+    max-width:
+        780px;
 
-    display: flex;
-    flex-wrap: wrap;
+    display:
+        flex;
 
-    gap: 9px;
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
 
     margin-bottom:
         42px;
@@ -416,7 +504,8 @@ button:focus-visible {
     border-radius:
         50px;
 
-    font-size: 0.78rem;
+    font-size:
+        0.78rem;
 
     color:
         var(--text-secondary);
@@ -425,20 +514,44 @@ button:focus-visible {
         rgba(255, 255, 255, 0.45);
 }
 
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
 
-    gap: 12px;
+/* HERO ACTIONS */
+
+.hero-actions {
+    width:
+        100%;
+
+    max-width:
+        780px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
 }
 
 .button {
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
-    justify-content: center;
+    align-items:
+        center;
 
-    min-height: 50px;
+    justify-content:
+        center;
+
+    min-height:
+        50px;
 
     padding:
         0
@@ -447,8 +560,11 @@ button:focus-visible {
     border-radius:
         50px;
 
-    font-size: 0.88rem;
-    font-weight: 650;
+    font-size:
+        0.88rem;
+
+    font-weight:
+        650;
 
     transition:
         transform 180ms ease,
@@ -466,7 +582,8 @@ button:focus-visible {
     background:
         var(--text-primary);
 
-    color: #ffffff;
+    color:
+        #ffffff;
 }
 
 .button-primary:hover {
@@ -500,145 +617,79 @@ button:focus-visible {
 ========================= */
 
 .hero-visual {
-    position: relative;
+    position:
+        relative;
 
-    aspect-ratio:
-        1 / 1.12;
+    width:
+        100%;
 
-    overflow: hidden;
+    min-height:
+        600px;
 
-    border-radius:
-        var(--radius-large);
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-end;
+
+    overflow:
+        visible;
 
     background:
-        radial-gradient(
-            circle at 25% 20%,
-            rgba(255, 255, 255, 0.7),
-            transparent 35%
-        ),
-        linear-gradient(
-            145deg,
-            #dce9e4,
-            #aac5bd
-        );
-
-    box-shadow:
-        var(--shadow);
-}
-
-.cell {
-    position: absolute;
-
-    border-radius: 50%;
+        transparent;
 
     border:
-        1px solid
-        rgba(49, 92, 89, 0.25);
-
-    background:
-        radial-gradient(
-            circle at 35% 30%,
-            rgba(255, 255, 255, 0.9),
-            rgba(49, 92, 89, 0.18)
-        );
-}
-
-.cell-one {
-    width: 260px;
-    height: 260px;
-
-    top: 15%;
-    left: 16%;
-}
-
-.cell-two {
-    width: 170px;
-    height: 170px;
-
-    bottom: 13%;
-    right: 8%;
-}
-
-.cell-three {
-    width: 105px;
-    height: 105px;
-
-    bottom: 19%;
-    left: 5%;
-}
-
-.vesicle {
-    position: absolute;
-
-    border-radius: 50%;
-
-    background:
-        rgba(49, 92, 89, 0.46);
-
-    box-shadow:
-        0 0 0 8px
-        rgba(255, 255, 255, 0.18);
-}
-
-.vesicle-one {
-    width: 28px;
-    height: 28px;
-
-    top: 17%;
-    right: 17%;
-}
-
-.vesicle-two {
-    width: 19px;
-    height: 19px;
-
-    top: 43%;
-    right: 10%;
-}
-
-.vesicle-three {
-    width: 34px;
-    height: 34px;
-
-    bottom: 30%;
-    left: 14%;
-}
-
-.vesicle-four {
-    width: 16px;
-    height: 16px;
-
-    top: 47%;
-    left: 10%;
-}
-
-.visual-label {
-    position: absolute;
-
-    left: 28px;
-    bottom: 26px;
-
-    padding:
-        9px
-        13px;
+        0;
 
     border-radius:
-        30px;
+        0;
 
-    background:
-        rgba(255, 255, 255, 0.76);
+    box-shadow:
+        none;
 
-    backdrop-filter:
-        blur(10px);
+    pointer-events:
+        none;
+}
 
-    -webkit-backdrop-filter:
-        blur(10px);
 
-    color:
-        var(--accent-dark);
+/* TRANSPARENT CELL / EV ARTWORK */
 
-    font-size: 0.76rem;
-    font-weight: 600;
+.hero-artwork {
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    right:
+        -95px;
+
+    width:
+        clamp(560px, 52vw, 760px);
+
+    max-width:
+        none;
+
+    height:
+        auto;
+
+    transform:
+        translateY(-50%);
+
+    object-fit:
+        contain;
+
+    object-position:
+        center;
+
+    filter:
+        drop-shadow(
+            0 28px 38px
+            rgba(49, 92, 89, 0.08)
+        );
 }
 
 
@@ -659,9 +710,11 @@ button:focus-visible {
 }
 
 .section-alt {
-    width: 100%;
+    width:
+        100%;
 
-    max-width: none;
+    max-width:
+        none;
 
     padding:
         130px
@@ -675,7 +728,8 @@ button:focus-visible {
 }
 
 .section-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         0.65fr
@@ -688,44 +742,36 @@ button:focus-visible {
 .section-heading h2,
 .section-header h2,
 .communication-grid h2 {
-    margin: 0;
+    margin:
+        0;
 
     font-size:
         clamp(2.8rem, 5vw, 5.4rem);
 
-    font-weight: 600;
+    font-weight:
+        600;
 
     letter-spacing:
         -0.055em;
 
-    line-height: 0.96;
-}
-
-.section-number {
-    margin-bottom:
-        18px;
-
-    color:
-        var(--accent);
-
-    font-size: 0.72rem;
-    font-weight: 750;
-
-    letter-spacing:
-        0.15em;
+    line-height:
+        0.96;
 }
 
 .section-content {
-    max-width: 760px;
+    max-width:
+        760px;
 }
 
 .section-content > p {
     color:
         var(--text-secondary);
 
-    font-size: 1.02rem;
+    font-size:
+        1.02rem;
 
-    line-height: 1.85;
+    line-height:
+        1.85;
 }
 
 .large-copy {
@@ -747,26 +793,34 @@ button:focus-visible {
 }
 
 .section-header {
-    display: flex;
+    display:
+        flex;
 
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items:
+        flex-end;
 
-    gap: 60px;
+    justify-content:
+        space-between;
+
+    gap:
+        60px;
 
     margin-bottom:
         70px;
 }
 
 .section-header > p {
-    max-width: 430px;
+    max-width:
+        430px;
 
-    margin-bottom: 0;
+    margin-bottom:
+        0;
 
     color:
         var(--text-secondary);
 
-    font-size: 0.95rem;
+    font-size:
+        0.95rem;
 }
 
 
@@ -876,19 +930,28 @@ button:focus-visible {
 ========================= */
 
 .research-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(2, 1fr);
 
-    gap: 14px;
+    gap:
+        14px;
 }
 
 .research-card {
-    min-height: 360px;
+    min-height:
+        320px;
 
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        flex-end;
 
     padding:
         clamp(28px, 4vw, 48px);
@@ -921,47 +984,45 @@ button:focus-visible {
         rgba(21, 36, 38, 0.05);
 }
 
-.card-number {
-    margin-bottom: auto;
-
-    color:
-        var(--accent);
-
-    font-size: 0.72rem;
-    font-weight: 750;
-}
-
 .research-card h3 {
-    max-width: 430px;
+    max-width:
+        430px;
 
     margin:
-        50px
+        0
         0
         18px;
 
     font-size:
         clamp(1.5rem, 2.4vw, 2.25rem);
 
-    font-weight: 600;
+    font-weight:
+        600;
 
-    line-height: 1.12;
+    line-height:
+        1.12;
 
     letter-spacing:
         -0.035em;
 }
 
 .research-card p {
-    max-width: 500px;
+    max-width:
+        500px;
 
-    margin-bottom: 0;
+    margin-bottom:
+        0;
 
     color:
         var(--text-secondary);
 
-    font-size: 0.94rem;
+    font-size:
+        0.94rem;
 
-    line-height: 1.75;
+    line-height:
+        1.75;
 }
+
 
 /* =========================
    FEATURED RESEARCH VISUAL
@@ -1097,7 +1158,7 @@ button:focus-visible {
 }
 
 
-/* IMAGE CAPTION */
+/* FEATURE CAPTION */
 
 .research-feature figcaption {
     display:
@@ -1161,8 +1222,7 @@ button:focus-visible {
         650;
 
     transition:
-        color 180ms ease,
-        transform 180ms ease;
+        color 180ms ease;
 }
 
 .research-feature figcaption a:hover {
@@ -1180,8 +1240,6 @@ button:focus-visible {
 }
 
 
-
-
 /* =========================
    RESEARCH EXPERIENCE
 ========================= */
@@ -1193,13 +1251,15 @@ button:focus-visible {
 }
 
 .timeline-item {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         0.55fr
         1.45fr;
 
-    gap: 60px;
+    gap:
+        60px;
 
     padding:
         42px 0;
@@ -1213,8 +1273,11 @@ button:focus-visible {
     color:
         var(--accent);
 
-    font-size: 0.79rem;
-    font-weight: 700;
+    font-size:
+        0.79rem;
+
+    font-weight:
+        700;
 
     letter-spacing:
         0.08em;
@@ -1232,7 +1295,8 @@ button:focus-visible {
     font-size:
         clamp(1.4rem, 2.3vw, 2rem);
 
-    font-weight: 600;
+    font-weight:
+        600;
 
     letter-spacing:
         -0.025em;
@@ -1245,16 +1309,19 @@ button:focus-visible {
     color:
         var(--text-primary) !important;
 
-    font-weight: 600;
+    font-weight:
+        600;
 }
 
 .timeline-content p {
-    max-width: 760px;
+    max-width:
+        760px;
 
     color:
         var(--text-secondary);
 
-    line-height: 1.75;
+    line-height:
+        1.75;
 }
 
 
@@ -1263,9 +1330,11 @@ button:focus-visible {
 ========================= */
 
 .section-dark {
-    width: 100%;
+    width:
+        100%;
 
-    max-width: none;
+    max-width:
+        none;
 
     padding:
         130px
@@ -1277,12 +1346,8 @@ button:focus-visible {
     background:
         var(--dark);
 
-    color: #ffffff;
-}
-
-.section-dark .section-number {
     color:
-        #89b5aa;
+        #ffffff;
 }
 
 .section-dark .section-header > p {
@@ -1302,7 +1367,8 @@ button:focus-visible {
 }
 
 .publication-item {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         minmax(150px, 0.35fr)
@@ -1312,7 +1378,8 @@ button:focus-visible {
         clamp(35px, 7vw, 100px);
 
     padding:
-        52px 0;
+        52px
+        0;
 
     border-bottom:
         1px solid
@@ -1320,19 +1387,28 @@ button:focus-visible {
 }
 
 .publication-meta {
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
 
-    align-items: flex-start;
+    flex-direction:
+        column;
 
-    gap: 12px;
+    align-items:
+        flex-start;
+
+    gap:
+        12px;
 }
 
 .publication-year {
-    color: #ffffff;
+    color:
+        #ffffff;
 
-    font-size: 0.82rem;
-    font-weight: 700;
+    font-size:
+        0.82rem;
+
+    font-weight:
+        700;
 
     letter-spacing:
         0.08em;
@@ -1340,9 +1416,11 @@ button:focus-visible {
 
 .publication-type,
 .publication-status {
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
+    align-items:
+        center;
 
     padding:
         6px
@@ -1358,10 +1436,14 @@ button:focus-visible {
     color:
         rgba(255, 255, 255, 0.65);
 
-    font-size: 0.68rem;
-    font-weight: 650;
+    font-size:
+        0.68rem;
 
-    line-height: 1.25;
+    font-weight:
+        650;
+
+    line-height:
+        1.25;
 
     letter-spacing:
         0.06em;
@@ -1382,7 +1464,8 @@ button:focus-visible {
 }
 
 .publication-content {
-    max-width: 900px;
+    max-width:
+        900px;
 }
 
 .publication-authors {
@@ -1392,37 +1475,44 @@ button:focus-visible {
     color:
         rgba(255, 255, 255, 0.61);
 
-    font-size: 0.87rem;
+    font-size:
+        0.87rem;
 
-    line-height: 1.65;
+    line-height:
+        1.65;
 }
 
 .publication-authors strong {
     color:
         var(--publication-accent);
 
-    font-weight: 700;
+    font-weight:
+        700;
 }
 
 .publication-content h3 {
-    max-width: 880px;
+    max-width:
+        880px;
 
     margin:
         0
         0
         22px;
 
-    color: #ffffff;
+    color:
+        #ffffff;
 
     font-size:
         clamp(1.55rem, 3vw, 2.65rem);
 
-    font-weight: 550;
+    font-weight:
+        550;
 
     letter-spacing:
         -0.035em;
 
-    line-height: 1.18;
+    line-height:
+        1.18;
 }
 
 .publication-journal {
@@ -1432,52 +1522,70 @@ button:focus-visible {
     color:
         rgba(255, 255, 255, 0.65);
 
-    font-size: 0.9rem;
+    font-size:
+        0.9rem;
 
-    line-height: 1.65;
+    line-height:
+        1.65;
 }
 
 .publication-note {
-    margin-bottom: 0;
+    margin-bottom:
+        0;
 
     color:
         var(--publication-accent-light);
 
-    font-size: 0.78rem;
-    font-weight: 600;
+    font-size:
+        0.78rem;
+
+    font-weight:
+        600;
 
     letter-spacing:
         0.03em;
 }
 
+
 /* COMPLETE PUBLICATION RECORD */
 
 .publications-footer {
-    display: flex;
+    display:
+        flex;
 
-    justify-content: flex-end;
+    justify-content:
+        flex-end;
 
-    margin-top: 46px;
+    margin-top:
+        46px;
 }
 
 .publication-record-link {
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    gap: 10px;
+    gap:
+        10px;
 
-    min-height: 48px;
+    min-height:
+        48px;
 
-    padding: 0 20px;
+    padding:
+        0
+        20px;
 
     border:
         1px solid
         var(--publication-accent);
 
-    border-radius: 50px;
+    border-radius:
+        50px;
 
     background:
         var(--publication-accent);
@@ -1485,9 +1593,11 @@ button:focus-visible {
     color:
         var(--dark);
 
-    font-size: 0.8rem;
+    font-size:
+        0.8rem;
 
-    font-weight: 750;
+    font-weight:
+        750;
 
     transition:
         background 180ms ease,
@@ -1497,7 +1607,8 @@ button:focus-visible {
 }
 
 .publication-record-link span:last-child {
-    font-size: 1rem;
+    font-size:
+        1rem;
 
     transition:
         transform 180ms ease;
@@ -1529,16 +1640,23 @@ button:focus-visible {
 ========================= */
 
 .publication-link {
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
-    justify-content: center;
+    align-items:
+        center;
 
-    gap: 9px;
+    justify-content:
+        center;
 
-    min-height: 42px;
+    gap:
+        9px;
 
-    margin-top: 4px;
+    min-height:
+        42px;
+
+    margin-top:
+        4px;
 
     padding:
         9px
@@ -1557,8 +1675,11 @@ button:focus-visible {
     color:
         var(--dark);
 
-    font-size: 0.8rem;
-    font-weight: 750;
+    font-size:
+        0.8rem;
+
+    font-weight:
+        750;
 
     letter-spacing:
         0.015em;
@@ -1576,9 +1697,11 @@ button:focus-visible {
 }
 
 .publication-link span {
-    font-size: 0.95rem;
+    font-size:
+        0.95rem;
 
-    line-height: 1;
+    line-height:
+        1;
 
     transition:
         transform 180ms ease;
@@ -1609,7 +1732,8 @@ button:focus-visible {
 
 .section-dark .publication-link:focus-visible {
     outline:
-        2px solid #ffffff;
+        2px solid
+        #ffffff;
 
     outline-offset:
         4px;
@@ -1621,7 +1745,8 @@ button:focus-visible {
 ========================= */
 
 .expertise-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(4, 1fr);
@@ -1646,32 +1771,43 @@ button:focus-visible {
 }
 
 .expertise-grid article:first-child {
-    padding-left: 0;
+    padding-left:
+        0;
 }
 
 .expertise-grid article:last-child {
-    padding-right: 0;
+    padding-right:
+        0;
 
-    border-right: 0;
+    border-right:
+        0;
 }
 
 .expertise-grid h3 {
-    min-height: 60px;
+    min-height:
+        60px;
 
     margin:
         0
         0
         28px;
 
-    font-size: 1.15rem;
-    font-weight: 650;
+    font-size:
+        1.15rem;
+
+    font-weight:
+        650;
 }
 
 .expertise-grid ul {
-    margin: 0;
-    padding: 0;
+    margin:
+        0;
 
-    list-style: none;
+    padding:
+        0;
+
+    list-style:
+        none;
 }
 
 .expertise-grid li {
@@ -1681,17 +1817,21 @@ button:focus-visible {
     color:
         var(--text-secondary);
 
-    font-size: 0.9rem;
+    font-size:
+        0.9rem;
 }
+
 
 /* =========================
    SCIENCE COMMUNICATION
 ========================= */
 
 .communication-section {
-    width: 100%;
+    width:
+        100%;
 
-    max-width: none;
+    max-width:
+        none;
 
     padding:
         130px
@@ -1705,7 +1845,8 @@ button:focus-visible {
 }
 
 .communication-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         0.8fr
@@ -1716,7 +1857,8 @@ button:focus-visible {
 }
 
 .communication-feature {
-    max-width: 720px;
+    max-width:
+        720px;
 }
 
 .communication-feature h3 {
@@ -1728,40 +1870,53 @@ button:focus-visible {
     font-size:
         clamp(2rem, 4vw, 4.3rem);
 
-    font-weight: 550;
+    font-weight:
+        550;
 
     letter-spacing:
         -0.045em;
 
-    line-height: 1.08;
+    line-height:
+        1.08;
 }
 
 .communication-feature > p:not(.eyebrow) {
-    max-width: 620px;
+    max-width:
+        620px;
 
     color:
         var(--text-secondary);
 
-    font-size: 1rem;
+    font-size:
+        1rem;
 
-    line-height: 1.8;
+    line-height:
+        1.8;
 }
 
 .communication-meta {
-    display: flex;
+    display:
+        flex;
 
-    flex-wrap: wrap;
+    flex-wrap:
+        wrap;
 
-    gap: 9px;
+    gap:
+        9px;
 
-    margin-top: 34px;
+    margin-top:
+        34px;
 }
 
 .communication-badge {
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
-    justify-content: center;
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     padding:
         8px
@@ -1780,13 +1935,19 @@ button:focus-visible {
     color:
         var(--accent-dark);
 
-    font-size: 0.74rem;
-    font-weight: 700;
+    font-size:
+        0.74rem;
 
-    line-height: 1.3;
+    font-weight:
+        700;
 
-    white-space: nowrap;
+    line-height:
+        1.3;
+
+    white-space:
+        nowrap;
 }
+
 
 /* =========================
    CV / ACTIVITIES
@@ -1804,13 +1965,15 @@ button:focus-visible {
 }
 
 .activity-list div {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         0.6fr
         1.4fr;
 
-    gap: 30px;
+    gap:
+        30px;
 
     padding:
         22px 0;
@@ -1824,12 +1987,16 @@ button:focus-visible {
     color:
         var(--text-secondary);
 
-    font-size: 0.8rem;
+    font-size:
+        0.8rem;
 }
 
 .activity-list strong {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size:
+        0.95rem;
+
+    font-weight:
+        600;
 }
 
 .cv-note {
@@ -1839,6 +2006,7 @@ button:focus-visible {
     font-size:
         0.82rem !important;
 }
+
 
 /* =========================
    CONTACT
@@ -1866,11 +2034,6 @@ button:focus-visible {
 
 
 /* CONTACT HEADER */
-
-.contact-section .section-number {
-    color:
-        #8fb8ae;
-}
 
 .contact-header {
     max-width:
@@ -2119,10 +2282,12 @@ button:focus-visible {
         inset;
 }
 
+
 /* FORM STATUS */
 
 .form-status {
-    min-height: 24px;
+    min-height:
+        24px;
 
     margin-top:
         18px;
@@ -2163,7 +2328,8 @@ button:focus-visible {
         none;
 }
 
-/* HONEYPOT — MUST NEVER BE VISIBLE */
+
+/* HONEYPOT */
 
 .form-honeypot {
     position:
@@ -2398,19 +2564,26 @@ button:focus-visible {
         1.7;
 }
 
+
 /* =========================
    FOOTER
 ========================= */
 
 .site-footer {
-    min-height: 110px;
+    min-height:
+        110px;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
-    justify-content: space-between;
+    align-items:
+        center;
 
-    gap: 30px;
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
 
     padding:
         0
@@ -2429,54 +2602,74 @@ button:focus-visible {
         1px solid
         rgba(255, 255, 255, 0.1);
 
-    font-size: 0.78rem;
+    font-size:
+        0.78rem;
 }
 
 .footer-identity {
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 14px;
+    gap:
+        14px;
 }
 
 .footer-identity strong {
-    display: grid;
+    display:
+        grid;
 
-    place-items: center;
+    place-items:
+        center;
 
-    width: 34px;
-    height: 34px;
+    width:
+        34px;
+
+    height:
+        34px;
 
     border:
         1px solid
         rgba(255, 255, 255, 0.22);
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
-    color: #ffffff;
+    color:
+        #ffffff;
 
-    font-size: 0.65rem;
+    font-size:
+        0.65rem;
 }
 
 .footer-links {
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    flex-wrap: wrap;
+    flex-wrap:
+        wrap;
 
-    gap: 20px;
+    gap:
+        20px;
 }
 
 .footer-links a {
     color:
         rgba(255, 255, 255, 0.62);
 
-    font-size: 0.76rem;
-    font-weight: 600;
+    font-size:
+        0.76rem;
+
+    font-weight:
+        600;
 
     transition:
         color 180ms ease;
@@ -2488,7 +2681,8 @@ button:focus-visible {
 }
 
 .footer-label {
-    margin: 0;
+    margin:
+        0;
 
     color:
         rgba(255, 255, 255, 0.5);
@@ -2502,14 +2696,16 @@ button:focus-visible {
 @media (max-width: 1400px) {
 
     .contact-header {
-        max-width: 1000px;
+        max-width:
+            1000px;
 
         margin-bottom:
             60px;
     }
 
     .contact-header h2 {
-        max-width: 950px;
+        max-width:
+            950px;
 
         font-size:
             clamp(3rem, 6vw, 5.8rem);
@@ -2524,21 +2720,28 @@ button:focus-visible {
     }
 
     .contact-form {
-        width: 100%;
+        width:
+            100%;
 
-        max-width: 900px;
+        max-width:
+            900px;
     }
 
     .contact-profiles {
-        width: 100%;
+        width:
+            100%;
 
-        max-width: 900px;
+        max-width:
+            900px;
 
-        display: grid;
+        display:
+            grid;
 
-grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
 
-        column-gap: 30px;
+        column-gap:
+            30px;
     }
 
     .contact-profiles-label {
@@ -2556,11 +2759,11 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-column:
             1 / -1;
 
-        max-width: 520px;
+        max-width:
+            520px;
     }
 
 }
-
 
 
 /* =========================
@@ -2570,22 +2773,45 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 @media (max-width: 1050px) {
 
     .site-nav {
-        gap: 17px;
+        gap:
+            17px;
 
-        font-size: 0.75rem;
+        font-size:
+            0.75rem;
     }
 
     .site-nav a:nth-child(6) {
-        display: none;
+        display:
+            none;
     }
+
+
+    /* TABLET HERO */
 
     .hero-grid {
         grid-template-columns:
-            1.2fr
-            0.8fr;
+            minmax(0, 1.2fr)
+            minmax(300px, 0.8fr);
 
-        gap: 45px;
+        gap:
+            45px;
     }
+
+    .hero-visual {
+        min-height:
+            520px;
+    }
+
+    .hero-artwork {
+        right:
+            -55px;
+
+        width:
+            clamp(500px, 56vw, 650px);
+    }
+
+
+    /* TABLET EXPERTISE */
 
     .expertise-grid {
         grid-template-columns:
@@ -2608,60 +2834,70 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 @media (max-width: 780px) {
 
     .nav-container {
-        height: 70px;
+        height:
+            70px;
     }
 
-/* MOBILE ABOUT */
 
-.about-grid {
-    grid-template-columns:
-        1fr;
+    /* MOBILE ABOUT */
 
-    gap:
-        50px;
-}
+    .about-grid {
+        grid-template-columns:
+            1fr;
 
-.about-portrait {
-    width:
-        min(100%, 430px);
+        gap:
+            50px;
+    }
 
-    max-width:
-        none;
+    .about-portrait {
+        width:
+            min(100%, 430px);
 
-    margin:
-        40px
-        auto
-        0;
-}
+        max-width:
+            none;
 
-.about-copy {
-    width:
-        100%;
-}
-   
+        margin:
+            40px
+            auto
+            0;
+    }
+
+    .about-copy {
+        width:
+            100%;
+    }
+
+
     /* MOBILE NAVIGATION */
 
     .menu-toggle {
-        display: block;
+        display:
+            block;
 
-        z-index: 1100;
+        z-index:
+            1100;
     }
 
     .site-nav {
-        position: fixed;
+        position:
+            fixed;
 
         inset:
             70px
             0
             0;
 
-        display: flex;
+        display:
+            flex;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: flex-start;
+        align-items:
+            flex-start;
 
-        gap: 0;
+        gap:
+            0;
 
         padding:
             35px
@@ -2684,25 +2920,30 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 
     .site-nav a,
     .site-nav a:nth-child(6) {
-        display: block;
+        display:
+            block;
 
-        width: 100%;
+        width:
+            100%;
 
         padding:
-            18px 0;
+            18px
+            0;
 
         border-bottom:
             1px solid
             var(--border);
 
-        font-size: 1.2rem;
+        font-size:
+            1.2rem;
 
         color:
             var(--text-primary);
     }
 
     .site-nav a::after {
-        display: none;
+        display:
+            none;
     }
 
     .menu-toggle.active span:first-child {
@@ -2721,17 +2962,21 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
     /* MOBILE HERO */
 
     .hero {
-        min-height: auto;
+        min-height:
+            auto;
 
         padding:
-            80px 0;
+            80px
+            0
+            95px;
     }
 
     .hero-grid {
         grid-template-columns:
             1fr;
 
-        gap: 55px;
+        gap:
+            45px;
     }
 
     .hero h1 {
@@ -2739,13 +2984,55 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
             clamp(3.3rem, 15vw, 5rem);
     }
 
-    .hero-visual {
-        width: 100%;
+    .hero-actions {
+        width:
+            100%;
 
-        max-width: 520px;
+        max-width:
+            none;
+
+        justify-content:
+            space-between;
+    }
+
+    .hero-visual {
+        width:
+            100%;
+
+        min-height:
+            540px;
 
         margin:
             0 auto;
+
+        overflow:
+            visible;
+
+        justify-content:
+            center;
+    }
+
+    .hero-artwork {
+        position:
+            absolute;
+
+        top:
+            50%;
+
+        right:
+            50%;
+
+        width:
+            min(150vw, 620px);
+
+        max-width:
+            none;
+
+        height:
+            auto;
+
+        transform:
+            translate(50%, -50%);
     }
 
 
@@ -2765,11 +3052,13 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-columns:
             1fr;
 
-        gap: 55px;
+        gap:
+            55px;
     }
 
     .section-header {
-        display: block;
+        display:
+            block;
 
         margin-bottom:
             50px;
@@ -2790,11 +3079,11 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 
     .research-card {
         min-height:
-            300px;
+            280px;
     }
 
 
-       /* MOBILE FEATURED RESEARCH VISUAL */
+    /* MOBILE FEATURED RESEARCH VISUAL */
 
     .research-feature {
         margin-top:
@@ -2881,14 +3170,15 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
             6px;
     }
 
-   
+
     /* MOBILE EXPERIENCE */
 
     .timeline-item {
         grid-template-columns:
             1fr;
 
-        gap: 18px;
+        gap:
+            18px;
     }
 
 
@@ -2898,19 +3188,23 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-columns:
             1fr;
 
-        gap: 25px;
+        gap:
+            25px;
 
         padding:
-            42px 0;
+            42px
+            0;
     }
 
     .publication-meta {
         flex-direction:
             row;
 
-        align-items: center;
+        align-items:
+            center;
 
-        flex-wrap: wrap;
+        flex-wrap:
+            wrap;
     }
 
     .publication-content h3 {
@@ -2919,20 +3213,24 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .publication-link {
-        min-height: 44px;
+        min-height:
+            44px;
 
         padding:
             10px
             17px;
     }
 
-   .publications-footer {
-    margin-top: 36px;
-}
+    .publications-footer {
+        margin-top:
+            36px;
+    }
 
-.publication-record-link {
-    width: 100%;
-}
+    .publication-record-link {
+        width:
+            100%;
+    }
+
 
     /* MOBILE EXPERTISE */
 
@@ -2945,9 +3243,11 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
     .expertise-grid article:first-child,
     .expertise-grid article:last-child {
         padding:
-            30px 0;
+            30px
+            0;
 
-        border-right: 0;
+        border-right:
+            0;
     }
 
 
@@ -2957,7 +3257,8 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-columns:
             1fr;
 
-        gap: 7px;
+        gap:
+            7px;
     }
 
 
@@ -3013,41 +3314,51 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
             52px;
     }
 
-.contact-profiles {
-    padding-top:
-        0;
+    .contact-profiles {
+        padding-top:
+            0;
 
-    grid-template-columns:
-        1fr;
-}
+        grid-template-columns:
+            1fr;
+    }
 
-.contact-profiles-label,
-.contact-privacy {
-    grid-column:
-        1;
-}
+    .contact-profiles-label,
+    .contact-privacy {
+        grid-column:
+            1;
+    }
 
-.contact-privacy {
+    .contact-privacy {
         max-width:
             100%;
     }
+
+
     /* MOBILE FOOTER */
 
     .site-footer {
-        min-height: auto;
+        min-height:
+            auto;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: flex-start;
+        align-items:
+            flex-start;
 
-        justify-content: center;
+        justify-content:
+            center;
 
-        padding-top: 32px;
-        padding-bottom: 32px;
+        padding-top:
+            32px;
+
+        padding-bottom:
+            32px;
     }
 
     .footer-links {
-        justify-content: flex-start;
+        justify-content:
+            flex-start;
 
         gap:
             12px
@@ -3064,11 +3375,13 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 @media (prefers-reduced-motion: reduce) {
 
     html {
-        scroll-behavior: auto;
+        scroll-behavior:
+            auto;
     }
 
     * {
-        transition: none !important;
+        transition:
+            none !important;
     }
 
 }
