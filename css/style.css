@@ -2393,24 +2393,34 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
         height: 70px;
     }
 
-   /* MOBILE ABOUT */
+/* MOBILE ABOUT */
 
-.about-content {
+.about-grid {
     grid-template-columns:
         1fr;
 
     gap:
-        38px;
+        50px;
 }
 
 .about-portrait {
     width:
-        min(100%, 420px);
+        min(100%, 430px);
+
+    max-width:
+        none;
 
     margin:
-        0 auto;
+        40px
+        auto
+        0;
 }
 
+.about-copy {
+    width:
+        100%;
+}
+   
     /* MOBILE NAVIGATION */
 
     .menu-toggle {
