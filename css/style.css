@@ -3272,6 +3272,28 @@ textarea:focus-visible {
 
 }
 
+/* =========================
+   PHONE HERO — HIDE ARTWORK
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .hero-media,
+    .hero-artwork {
+        display: none !important;
+    }
+
+    .hero-grid {
+        gap: 0 !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+}
+
 
 /* =========================
    REDUCED MOTION
