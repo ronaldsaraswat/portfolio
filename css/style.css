@@ -620,10 +620,10 @@ textarea:focus-visible {
 
 
 /* =========================
-   DOCTORAL CREDENTIAL
+   CAREER CREDENTIAL
 ========================= */
 
-.doctoral-credential {
+.career-credential {
     margin: 0 0 38px;
 
     padding: 22px 24px;
@@ -645,7 +645,7 @@ textarea:focus-visible {
     background: var(--accent-soft);
 }
 
-.doctoral-credential-label {
+.career-credential-label {
     color: var(--accent);
 
     font-size: 0.70rem;
@@ -655,7 +655,7 @@ textarea:focus-visible {
     text-transform: uppercase;
 }
 
-.doctoral-credential strong {
+.career-credential strong {
     color: var(--text-primary);
 
     font-size: 1rem;
@@ -663,7 +663,7 @@ textarea:focus-visible {
     line-height: 1.45;
 }
 
-.doctoral-credential-meta {
+.career-credential-meta {
     color: var(--text-secondary);
 
     font-size: 0.80rem;
