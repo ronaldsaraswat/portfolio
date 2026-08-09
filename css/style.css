@@ -620,6 +620,45 @@ textarea:focus-visible {
 
 
 /* =========================
+   CURRENT STATUS
+========================= */
+
+.current-status {
+    margin: 0 0 28px;
+
+    padding: 20px 22px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+
+    background: rgba(255, 255, 255, 0.52);
+}
+
+.current-status-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent);
+
+    font-size: 0.70rem;
+    font-weight: 750;
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.current-status p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
    CAREER CREDENTIAL
 ========================= */
 
@@ -668,6 +707,11 @@ textarea:focus-visible {
 
     font-size: 0.80rem;
     line-height: 1.5;
+}
+
+
+.career-credential + .career-credential {
+    margin-top: -20px;
 }
 
 
@@ -2218,10 +2262,25 @@ textarea:focus-visible {
 
 @media (max-width: 600px) {
 
-    .doctoral-credential {
-        padding: 19px 20px;
-        margin-bottom: 32px;
+    .current-status {
+        padding: 18px 19px;
+        margin-bottom: 24px;
     }
+
+    .current-status p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+    .career-credential {
+        padding: 19px 20px;
+        margin-bottom: 28px;
+    }
+
+   .career-credential + .career-credential {
+    margin-top: -10px;
+}
+   
 
     /* Gene & Tonic */
 
