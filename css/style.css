@@ -769,6 +769,80 @@ button:focus-visible {
     font-size: 0.95rem;
 }
 
+/* =========================
+   ABOUT PORTRAIT
+========================= */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 0.65fr)
+        minmax(0, 1.35fr);
+
+    gap:
+        clamp(35px, 5vw, 65px);
+
+    align-items:
+        start;
+}
+
+.about-portrait {
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-medium);
+
+    background:
+        var(--surface-soft);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.about-portrait img {
+    width: 100%;
+
+    aspect-ratio:
+        3 / 4;
+
+    object-fit: cover;
+
+    object-position:
+        center;
+
+    transition:
+        transform 300ms ease;
+}
+
+.about-portrait:hover img {
+    transform:
+        scale(1.02);
+}
+
+.about-copy {
+    min-width: 0;
+}
+
+.about-copy > p {
+    color:
+        var(--text-secondary);
+
+    font-size:
+        1.02rem;
+
+    line-height:
+        1.85;
+}
+
+.about-copy .large-copy {
+    color:
+        var(--text-primary) !important;
+}
+
+
 
 /* =========================
    RESEARCH CARDS
@@ -2292,6 +2366,23 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
         height: 70px;
     }
 
+   /* MOBILE ABOUT */
+
+.about-content {
+    grid-template-columns:
+        1fr;
+
+    gap:
+        38px;
+}
+
+.about-portrait {
+    width:
+        min(100%, 420px);
+
+    margin:
+        0 auto;
+}
 
     /* MOBILE NAVIGATION */
 
