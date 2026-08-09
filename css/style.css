@@ -2030,6 +2030,75 @@ button:focus-visible {
 
 
 /* =========================
+   CONTACT — TABLET / IPAD
+========================= */
+
+@media (max-width: 1400px) {
+
+    .contact-header {
+        max-width: 1000px;
+
+        margin-bottom:
+            60px;
+    }
+
+    .contact-header h2 {
+        max-width: 950px;
+
+        font-size:
+            clamp(3rem, 6vw, 5.8rem);
+    }
+
+    .contact-layout {
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        gap:
+            65px;
+    }
+
+    .contact-form {
+        width: 100%;
+
+        max-width: 900px;
+    }
+
+    .contact-profiles {
+        width: 100%;
+
+        max-width: 900px;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        column-gap: 30px;
+    }
+
+    .contact-profiles-label {
+        grid-column:
+            1 / -1;
+    }
+
+    .contact-profiles > a {
+        border-top:
+            1px solid
+            rgba(255, 255, 255, 0.14);
+    }
+
+    .contact-privacy {
+        grid-column:
+            1 / -1;
+
+        max-width: 520px;
+    }
+
+}
+
+
+
+/* =========================
    TABLET
 ========================= */
 
