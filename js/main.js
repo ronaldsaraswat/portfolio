@@ -188,3 +188,34 @@ if (
     );
 
 }
+
+
+/* =========================================
+   ACTIVE NAVIGATION LINK
+========================================= */
+
+const normalizePortfolioPath = (path) => {
+    const cleanedPath = path
+        .replace(/index\.html$/, "")
+        .replace(/\/+$/, "");
+
+    return cleanedPath || "/";
+};
+
+const currentPortfolioPath = normalizePortfolioPath(
+    window.location.pathname
+);
+
+document.querySelectorAll(".site-nav a[href^='/']").forEach((link) => {
+
+    const linkPath = normalizePortfolioPath(
+        new URL(link.href, window.location.origin).pathname
+    );
+
+    if (linkPath === currentPortfolioPath) {
+        link.setAttribute("aria-current", "page");
+    } else {
+        link.removeAttribute("aria-current");
+    }
+
+});
