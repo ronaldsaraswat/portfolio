@@ -4634,3 +4634,68 @@ textarea:focus-visible {
 
 }
 
+
+/* =========================================================
+   SCIENTIFIC VISUAL — FULL UNCROPPED DISPLAY
+========================================================= */
+
+.scientific-visual-stage {
+    width: 100%;
+    max-width: 1220px;
+
+    margin:
+        52px
+        auto
+        0;
+}
+
+.scientific-visual-preview {
+    width: 100%;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-medium);
+
+    background: #ffffff;
+
+    box-shadow:
+        var(--shadow);
+}
+
+.scientific-visual-preview img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    background: #ffffff;
+
+    pointer-events: none;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+@media (max-width: 600px) {
+
+    .scientific-visual-stage {
+        margin-top: 36px;
+    }
+
+    .scientific-visual-preview {
+        border-radius: 12px;
+    }
+
+}
+
