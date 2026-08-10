@@ -179,8 +179,6 @@
 
     <!-- =========================
          NAVIGATION
-         MASTER NAVIGATION WILL
-         BE STANDARDISED LATER
     ========================== -->
 
     <header class="site-header">
@@ -292,74 +290,8 @@
 
 
         <!-- =================================================
-             INTRODUCTION
-        ================================================== -->
-
-        <section class="section">
-
-            <div class="section-grid">
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        Get in Touch
-                    </p>
-
-                    <h2>
-                        Start a
-                        conversation.
-                    </h2>
-
-                </div>
-
-
-                <div class="section-content">
-
-                    <p class="large-copy">
-                        If you would like to discuss research,
-                        collaboration or a professional opportunity,
-                        send me a message using the form below.
-                    </p>
-
-                    <p>
-                        My scientific background spans cell and
-                        molecular biology, extracellular vesicles,
-                        cellular ageing and senescence, quantitative
-                        functional assays, proteomics and translational
-                        biomedical research.
-                    </p>
-
-                    <p>
-                        I am also interested in conversations around
-                        future biomedical R&D, technology development,
-                        scientific communication and interdisciplinary
-                        projects where my experience may be relevant.
-                    </p>
-
-
-                    <div class="current-status">
-
-                        <span class="current-status-label">
-                            Current Status
-                        </span>
-
-                        <p>
-                            Based in Paris, France. Open to new
-                            research, scientific collaboration
-                            and translational R&D opportunities.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
              CONTACT FORM
+             MOVED DIRECTLY BELOW HERO
         ================================================== -->
 
         <section class="contact-section">
@@ -392,7 +324,7 @@
 
 
                     <!-- =========================
-                         CONTACT FORM
+                         FORM
                     ========================== -->
 
                     <form
@@ -446,6 +378,7 @@
 
                             <label for="organisation">
                                 Organisation / Institution
+
                                 <span>
                                     Optional
                                 </span>
@@ -494,12 +427,20 @@
 
 
                         <!-- =========================
-                             SPAM PROTECTION
+                             HONEYPOT SPAM FIELD
+                             HIDDEN FROM REAL USERS
                         ========================== -->
 
                         <div
                             class="form-honeypot"
                             aria-hidden="true"
+                            style="
+                                position: absolute;
+                                left: -9999px;
+                                width: 1px;
+                                height: 1px;
+                                overflow: hidden;
+                            "
                         >
 
                             <label for="website">
@@ -542,13 +483,36 @@
 
 
                     <!-- =========================
-                         PROFESSIONAL PROFILES
+                         CONTACT SIDEBAR
                     ========================== -->
 
                     <aside class="contact-profiles">
 
 
                         <p class="contact-profiles-label">
+                            Current Status
+                        </p>
+
+
+                        <div class="current-status">
+
+                            <span class="current-status-label">
+                                Paris · France
+                            </span>
+
+                            <p>
+                                Open to new research,
+                                scientific collaboration and
+                                translational R&D opportunities.
+                            </p>
+
+                        </div>
+
+
+                        <p
+                            class="contact-profiles-label"
+                            style="margin-top: 2rem;"
+                        >
                             Scientific & Professional Profiles
                         </p>
 
@@ -651,7 +615,7 @@
 
 
         <!-- =================================================
-             ENQUIRY TYPES
+             AREAS FOR CONVERSATION
         ================================================== -->
 
         <section class="section">
@@ -666,14 +630,15 @@
 
                     <h2>
                         Areas for
-                        conversation
+                        conversation.
                     </h2>
 
                 </div>
 
+
                 <p>
-                    Examples of professional conversations
-                    I welcome.
+                    A few examples of the types of
+                    professional conversations I welcome.
                 </p>
 
             </div>
@@ -751,10 +716,75 @@
 
 
         <!-- =================================================
-             QUICK LINKS
+             SCIENTIFIC CONTEXT
         ================================================== -->
 
         <section class="section section-alt">
+
+            <div class="section-grid">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        Scientific Background
+                    </p>
+
+                    <h2>
+                        Where my work
+                        connects.
+                    </h2>
+
+                </div>
+
+
+                <div class="section-content">
+
+                    <p class="large-copy">
+                        My scientific background spans cell and
+                        molecular biology, extracellular vesicles,
+                        cellular ageing and senescence, quantitative
+                        functional assays, proteomics and translational
+                        biomedical research.
+                    </p>
+
+                    <p>
+                        I am particularly interested in conversations
+                        connecting mechanistic biology with quantitative
+                        experimentation, technology development and
+                        translational biomedical applications.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            class="button button-primary"
+                            href="/research/"
+                        >
+                            Explore Research
+                        </a>
+
+                        <a
+                            class="button button-secondary"
+                            href="/experience/"
+                        >
+                            Scientific Journey
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             QUICK LINKS
+        ================================================== -->
+
+        <section class="section">
 
             <div class="section-grid">
 
@@ -765,20 +795,14 @@
                     </p>
 
                     <h2>
-                        More before
-                        getting in touch.
+                        More about
+                        my work.
                     </h2>
 
                 </div>
 
 
                 <div class="section-content">
-
-                    <p class="large-copy">
-                        Explore the portfolio for more detail about
-                        my research, publications and scientific
-                        background.
-                    </p>
 
 
                     <div class="activity-list">
@@ -801,21 +825,6 @@
                         <div>
 
                             <span>
-                                Scientific Journey
-                            </span>
-
-                            <strong>
-                                International research experience
-                                across academic and translational
-                                environments
-                            </strong>
-
-                        </div>
-
-
-                        <div>
-
-                            <span>
                                 Publications
                             </span>
 
@@ -830,11 +839,25 @@
                         <div>
 
                             <span>
+                                Scientific Journey
+                            </span>
+
+                            <strong>
+                                International experience across
+                                academic and translational research
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
                                 Curriculum Vitae
                             </span>
 
                             <strong>
-                                Concise online profile and
+                                Professional profile and
                                 downloadable full CV
                             </strong>
 
@@ -848,16 +871,16 @@
 
                         <a
                             class="button button-primary"
-                            href="/research/"
+                            href="/cv/"
                         >
-                            Explore Research
+                            View CV
                         </a>
 
                         <a
                             class="button button-secondary"
-                            href="/cv/"
+                            href="/publications/"
                         >
-                            View CV
+                            Publications
                         </a>
 
                     </div>
