@@ -3379,3 +3379,192 @@ textarea:focus-visible {
 
 }
 
+
+
+/* =========================================================
+   FINAL ACCESSIBILITY / CONTRAST OVERRIDES
+   Site-wide light + dark section readability
+========================================================= */
+
+
+/* ---------- LIGHT CARDS ---------- */
+
+.direction-card {
+    color: var(--text-primary);
+}
+
+.direction-card h3 {
+    color: var(--text-primary);
+}
+
+.direction-card p {
+    color: var(--text-secondary);
+}
+
+.direction-card .eyebrow {
+    color: var(--accent);
+}
+
+
+/* Ensure cards remain readable on soft/light backgrounds */
+
+.section-alt .direction-card {
+    background: rgba(255, 255, 255, 0.72);
+    border-color: var(--border);
+}
+
+.section-alt .direction-card h3 {
+    color: var(--text-primary);
+}
+
+.section-alt .direction-card p {
+    color: var(--text-secondary);
+}
+
+
+/* ---------- DARK SECTIONS ---------- */
+
+.section-dark .eyebrow {
+    color: var(--publication-accent-light);
+}
+
+.section-dark .section-heading h2,
+.section-dark .section-header h2,
+.section-dark h2 {
+    color: #ffffff;
+}
+
+.section-dark .section-header > p,
+.section-dark .section-content > p,
+.section-dark > p {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.section-dark .large-copy {
+    color: #ffffff !important;
+}
+
+
+/* ---------- CARDS INSIDE DARK SECTIONS ---------- */
+
+.section-dark .direction-card {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+}
+
+.section-dark .direction-card h3 {
+    color: #ffffff;
+}
+
+.section-dark .direction-card p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.section-dark .direction-card .eyebrow {
+    color: var(--publication-accent-light);
+}
+
+
+/* ---------- ACTIVITY LISTS INSIDE DARK SECTIONS ---------- */
+
+.section-dark .activity-list {
+    border-top-color: rgba(255, 255, 255, 0.18);
+}
+
+.section-dark .activity-list div {
+    border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+.section-dark .activity-list span {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.section-dark .activity-list strong {
+    color: #ffffff;
+}
+
+
+/* ---------- RESEARCH / PUBLICATION CALLOUTS ---------- */
+
+.research-principle {
+    color: var(--text-primary);
+}
+
+.research-principle span {
+    color: var(--accent-dark);
+}
+
+.research-principle p {
+    color: var(--text-primary);
+}
+
+.section-dark .research-principle {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(184, 221, 211, 0.45);
+}
+
+.section-dark .research-principle span {
+    color: var(--publication-accent-light);
+}
+
+.section-dark .research-principle p {
+    color: rgba(255, 255, 255, 0.84);
+}
+
+
+/* ---------- STATUS BOXES ---------- */
+
+.current-status {
+    color: var(--text-primary);
+}
+
+.current-status p {
+    color: var(--text-secondary);
+}
+
+.section-dark .current-status {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.section-dark .current-status-label {
+    color: var(--publication-accent-light);
+}
+
+.section-dark .current-status p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* ---------- BUTTON VISIBILITY ON DARK BACKGROUNDS ---------- */
+
+.section-dark .button-primary {
+    background: var(--publication-accent);
+    color: var(--dark);
+}
+
+.section-dark .button-primary:hover {
+    background: var(--publication-accent-light);
+    color: var(--dark);
+}
+
+
+/* =========================================================
+   TABLET NAVIGATION
+   Keep all nine portfolio destinations visible
+========================================================= */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+
+    .site-nav {
+        gap: 12px;
+        font-size: 0.72rem;
+    }
+
+    .site-nav a:nth-child(6) {
+        display: block;
+    }
+
+}
+
