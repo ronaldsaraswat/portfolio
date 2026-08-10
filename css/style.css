@@ -5871,3 +5871,132 @@ p:not(.eyebrow):not(.experience-event-role) {
     }
 
 }
+
+
+/* =========================================================
+   COMMUNITY — SCIENCE OUTREACH VISUALS
+========================================================= */
+
+.community-outreach-gallery {
+    width: 100%;
+
+    margin-top: 34px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(260px, 0.65fr);
+
+    gap: 14px;
+
+    align-items: stretch;
+}
+
+.community-outreach-gallery figure {
+    margin: 0;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-rows:
+        minmax(0, 1fr)
+        auto;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-medium);
+
+    background:
+        var(--surface);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.community-outreach-gallery img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 300px;
+
+    object-fit: cover;
+
+    pointer-events: none;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.community-outreach-main img {
+    object-position: center;
+}
+
+.community-outreach-secondary img {
+    object-position: center;
+}
+
+.community-outreach-gallery figcaption {
+    padding:
+        11px
+        14px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.66rem;
+    font-weight: 650;
+
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+
+    text-transform: uppercase;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .community-outreach-gallery {
+        grid-template-columns:
+            1fr
+            0.72fr;
+    }
+
+    .community-outreach-gallery img {
+        min-height: 250px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .community-outreach-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .community-outreach-gallery img {
+        min-height: 0;
+
+        aspect-ratio:
+            4 / 3;
+    }
+
+}
+
