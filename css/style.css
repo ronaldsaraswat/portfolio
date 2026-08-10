@@ -5691,3 +5691,183 @@ p:not(.eyebrow):not(.experience-event-role) {
     }
 
 }
+
+
+/* =========================================================
+   ABOUT PAGE — EDITORIAL VISUAL BREAKS
+========================================================= */
+
+.about-visual-break {
+    width:
+        min(
+            92%,
+            var(--content-width)
+        );
+
+    margin: 0 auto;
+
+    padding:
+        0
+        0
+        clamp(
+            78px,
+            8vw,
+            115px
+        );
+}
+
+.about-editorial-figure {
+    width:
+        min(
+            78%,
+            920px
+        );
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-large);
+
+    background:
+        var(--surface);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.about-editorial-right {
+    margin-left: auto;
+}
+
+.about-editorial-left {
+    margin-right: auto;
+}
+
+
+/* IMAGE */
+
+.about-editorial-figure img {
+    width: 100%;
+
+    aspect-ratio:
+        16 / 9;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    pointer-events: none;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+
+/* CAPTION */
+
+.about-editorial-figure figcaption {
+    display: grid;
+
+    grid-template-columns:
+        minmax(150px, 0.38fr)
+        minmax(0, 1.62fr);
+
+    gap:
+        clamp(
+            24px,
+            4vw,
+            52px
+        );
+
+    padding:
+        19px
+        22px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    background:
+        var(--surface);
+}
+
+.about-editorial-figure figcaption span {
+    color: var(--accent);
+
+    font-size: 0.68rem;
+    font-weight: 750;
+
+    line-height: 1.5;
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+}
+
+.about-editorial-figure figcaption p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ABOUT VISUALS — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-editorial-figure {
+        width: 88%;
+    }
+
+}
+
+
+/* =========================================================
+   ABOUT VISUALS — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-visual-break {
+        width: 90%;
+
+        padding-bottom: 62px;
+    }
+
+    .about-editorial-figure,
+    .about-editorial-right,
+    .about-editorial-left {
+        width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        border-radius:
+            var(--radius-medium);
+    }
+
+    .about-editorial-figure img {
+        aspect-ratio:
+            4 / 3;
+    }
+
+    .about-editorial-figure figcaption {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        padding:
+            15px
+            16px;
+    }
+
+}
