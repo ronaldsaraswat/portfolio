@@ -4699,13 +4699,14 @@ textarea:focus-visible {
 
 }
 
-
 /* =========================================================
-   EXPERIENCE PAGE — VISUAL JOURNEY
+   EXPERIENCE PAGE — FINAL VISUAL LAYOUT
 ========================================================= */
 
 
-/* ---------- HERO ---------- */
+/* =========================================================
+   EXPERIENCE HERO
+========================================================= */
 
 .experience-hero {
     width:
@@ -4717,9 +4718,9 @@ textarea:focus-visible {
     margin: 0 auto;
 
     padding:
-        clamp(80px, 9vw, 135px)
+        clamp(84px, 8vw, 125px)
         0
-        clamp(88px, 9vw, 130px);
+        clamp(90px, 8vw, 125px);
 
     border-bottom:
         1px solid
@@ -4730,12 +4731,12 @@ textarea:focus-visible {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(360px, 0.92fr);
+        minmax(0, 1.15fr)
+        minmax(360px, 0.85fr);
 
     gap:
         clamp(
-            48px,
+            55px,
             7vw,
             100px
         );
@@ -4748,26 +4749,26 @@ textarea:focus-visible {
 }
 
 .experience-hero h1 {
-    max-width: 780px;
+    max-width: 760px;
 
     margin:
         0
         0
-        36px;
+        34px;
 
     color: var(--text-primary);
 
     font-size:
         clamp(
             3.7rem,
-            6.7vw,
-            7rem
+            6vw,
+            6.7rem
         );
 
     font-weight: 620;
 
     letter-spacing: -0.064em;
-    line-height: 0.92;
+    line-height: 0.94;
 }
 
 .experience-hero-intro {
@@ -4780,18 +4781,24 @@ textarea:focus-visible {
     font-size:
         clamp(
             1.18rem,
-            1.9vw,
-            1.65rem
+            1.8vw,
+            1.6rem
         );
 
     line-height: 1.55;
     letter-spacing: -0.02em;
 }
 
-.experience-hero-media {
-    position: relative;
 
+/* Hero photograph */
+
+.experience-hero-media {
     width: 100%;
+    max-width: 480px;
+
+    justify-self: end;
+
+    margin: 0;
 
     overflow: hidden;
 
@@ -4813,7 +4820,9 @@ textarea:focus-visible {
     height: 100%;
 
     object-fit: cover;
-    object-position: center;
+
+    object-position:
+        center center;
 
     pointer-events: none;
 
@@ -4825,21 +4834,23 @@ textarea:focus-visible {
 }
 
 
-/* ---------- MEETINGS ---------- */
+/* =========================================================
+   SCIENTIFIC MEETINGS
+========================================================= */
 
 .experience-meetings {
     padding-top:
         clamp(
             100px,
-            10vw,
-            145px
+            9vw,
+            140px
         );
 
     padding-bottom:
         clamp(
             100px,
-            10vw,
-            145px
+            9vw,
+            140px
         );
 }
 
@@ -4847,50 +4858,54 @@ textarea:focus-visible {
     display: flex;
     flex-direction: column;
 
-    gap:
-        clamp(
-            55px,
-            7vw,
-            90px
-        );
+    gap: 34px;
 }
 
+
+/* =========================================================
+   INDIVIDUAL EVENT CARD
+========================================================= */
+
 .experience-event {
+    overflow: hidden;
+
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(340px, 0.92fr);
+        minmax(0, 1.06fr)
+        minmax(340px, 0.94fr);
 
-    gap:
-        clamp(
-            38px,
-            6vw,
-            78px
-        );
+    align-items: stretch;
 
-    align-items: center;
+    gap: 0;
 
-    padding-bottom:
-        clamp(
-            55px,
-            6vw,
-            80px
-        );
-
-    border-bottom:
+    border:
         1px solid
         var(--border);
+
+    border-radius:
+        var(--radius-large);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.64
+        );
+
+    box-shadow:
+        0 16px 45px
+        rgba(
+            21,
+            36,
+            38,
+            0.05
+        );
 }
 
-.experience-event:last-child {
-    padding-bottom: 0;
 
-    border-bottom: 0;
-}
-
-
-/* Alternating rows */
+/* Alternating events */
 
 .experience-event-reverse
 .experience-event-media {
@@ -4905,33 +4920,36 @@ textarea:focus-visible {
 }
 
 
-/* ---------- EVENT IMAGE ---------- */
+/* =========================================================
+   EVENT PHOTOGRAPH
+========================================================= */
 
 .experience-event-media {
     position: relative;
 
-    width: 100%;
+    min-width: 0;
 
-    overflow: hidden;
+    margin: 0;
 
-    aspect-ratio:
-        4 / 3;
-
-    border-radius:
-        var(--radius-medium);
+    display: flex;
+    flex-direction: column;
 
     background:
         var(--surface-soft);
-
-    box-shadow:
-        var(--shadow);
 }
 
 .experience-event-media img {
     width: 100%;
     height: 100%;
 
+    min-height: 410px;
+
+    flex: 1;
+
     object-fit: cover;
+
+    object-position:
+        center center;
 
     pointer-events: none;
 
@@ -4948,23 +4966,66 @@ textarea:focus-visible {
 .experience-event:hover
 .experience-event-media img {
     transform:
-        scale(1.015);
+        scale(1.012);
 }
 
 
-/* ---------- EVENT COPY ---------- */
+/* Caption directly attached to image */
+
+.experience-event-media figcaption {
+    flex: 0 0 auto;
+
+    padding:
+        13px
+        17px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.70rem;
+    font-weight: 650;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.055em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   EVENT TEXT
+========================================================= */
 
 .experience-event-content {
     min-width: 0;
 
-    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding:
+        clamp(
+            38px,
+            4.5vw,
+            60px
+        );
 }
 
 .experience-event-content .eyebrow {
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 }
 
 .experience-event-content h3 {
+    max-width: 520px;
+
     margin:
         0
         0
@@ -4974,18 +5035,20 @@ textarea:focus-visible {
 
     font-size:
         clamp(
-            2rem,
-            3.6vw,
-            3.8rem
+            1.8rem,
+            3vw,
+            3.2rem
         );
 
     font-weight: 600;
 
-    letter-spacing: -0.048em;
-    line-height: 1.03;
+    letter-spacing: -0.045em;
+    line-height: 1.06;
 }
 
 .experience-event-role {
+    max-width: 500px;
+
     margin:
         0
         0
@@ -4999,19 +5062,22 @@ textarea:focus-visible {
     line-height: 1.55;
 }
 
-.experience-event-content > p:not(.eyebrow):not(.experience-event-role) {
-    max-width: 540px;
+.experience-event-content >
+p:not(.eyebrow):not(.experience-event-role) {
+    max-width: 520px;
 
     margin-bottom: 0;
 
     color: var(--text-secondary);
 
-    font-size: 0.96rem;
+    font-size: 0.95rem;
     line-height: 1.78;
 }
 
 
-/* ---------- AWARD HIGHLIGHT ---------- */
+/* =========================================================
+   AWARD HIGHLIGHT
+========================================================= */
 
 .experience-event-highlight {
     margin-top: 28px;
@@ -5058,101 +5124,180 @@ textarea:focus-visible {
 
 
 /* =========================================================
-   EXPERIENCE — TABLET
+   EVENT-SPECIFIC IMAGE POSITIONING
 ========================================================= */
 
-@media (max-width: 900px) {
+/* Marseille — retain stage and presentation slide */
 
-    .experience-hero {
-        width: 90%;
+.experience-event:nth-child(1)
+.experience-event-media img {
+    object-position:
+        center center;
+}
 
-        padding:
-            78px
-            0
-            90px;
-    }
+
+/* Maastricht — keep Ronald + poster visible */
+
+.experience-event:nth-child(2)
+.experience-event-media img {
+    object-position:
+        center 46%;
+}
+
+
+/* MCCT — preserve full group composition */
+
+.experience-event:nth-child(3)
+.experience-event-media img {
+    object-position:
+        center center;
+}
+
+
+/* Mainz — preserve conference banner + group */
+
+.experience-event:nth-child(4)
+.experience-event-media img {
+    object-position:
+        center center;
+}
+
+
+/* =========================================================
+   MEDIUM / IPAD LANDSCAPE
+========================================================= */
+
+@media (max-width: 1050px) {
 
     .experience-hero-grid {
         grid-template-columns:
-            1fr;
+            minmax(0, 1.1fr)
+            minmax(320px, 0.9fr);
 
-        gap: 46px;
-    }
-
-    .experience-hero h1 {
-        max-width: 780px;
-
-        font-size:
-            clamp(
-                3.5rem,
-                10vw,
-                5.8rem
-            );
+        gap: 42px;
     }
 
     .experience-hero-media {
-        width:
-            min(
-                100%,
-                620px
-            );
-
-        aspect-ratio:
-            16 / 10;
+        max-width: 410px;
     }
 
-
-    .experience-event,
-    .experience-event-reverse {
+    .experience-event {
         grid-template-columns:
-            1fr;
-
-        gap: 30px;
+            minmax(0, 1fr)
+            minmax(310px, 0.9fr);
     }
 
-    .experience-event-media,
-    .experience-event-reverse
-    .experience-event-media {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .experience-event-content,
-    .experience-event-reverse
     .experience-event-content {
-        grid-column: 1;
-        grid-row: 2;
-
-        max-width: 720px;
+        padding:
+            36px
+            34px;
     }
 
-    .experience-event-media {
-        aspect-ratio:
-            16 / 10;
+    .experience-event-media img {
+        min-height: 360px;
     }
 
 }
 
 
 /* =========================================================
-   EXPERIENCE — MOBILE
+   TABLET PORTRAIT
+========================================================= */
+
+@media (max-width: 860px) {
+
+    /* Hero */
+
+    .experience-hero {
+        width: 90%;
+
+        padding:
+            76px
+            0
+            86px;
+    }
+
+    .experience-hero-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 38px;
+    }
+
+    .experience-hero-media {
+        width: 100%;
+        max-width: 650px;
+
+        justify-self: start;
+
+        aspect-ratio:
+            16 / 10;
+    }
+
+
+    /* Events become stacked cards */
+
+    .experience-event,
+    .experience-event-reverse {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /*
+       IMPORTANT:
+       Text comes BEFORE the image when stacked.
+       This prevents the next photograph appearing
+       to belong to the previous conference.
+    */
+
+    .experience-event-content,
+    .experience-event-reverse
+    .experience-event-content {
+        order: 1;
+
+        width: 100%;
+
+        padding:
+            34px
+            32px;
+    }
+
+    .experience-event-media,
+    .experience-event-reverse
+    .experience-event-media {
+        order: 2;
+
+        width: 100%;
+    }
+
+    .experience-event-media img {
+        min-height: 0;
+
+        aspect-ratio:
+            16 / 10;
+
+        object-fit: cover;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
 
     .experience-hero {
         padding:
-            65px
+            64px
             0
-            72px;
-    }
-
-    .experience-hero-grid {
-        gap: 34px;
+            70px;
     }
 
     .experience-hero h1 {
-        margin-bottom: 28px;
+        margin-bottom: 27px;
 
         font-size:
             clamp(
@@ -5167,9 +5312,9 @@ textarea:focus-visible {
     .experience-hero-intro {
         font-size:
             clamp(
-                1.08rem,
+                1.06rem,
                 5.2vw,
-                1.35rem
+                1.33rem
             );
     }
 
@@ -5183,29 +5328,43 @@ textarea:focus-visible {
 
 
     .experience-event-list {
-        gap: 54px;
+        gap: 24px;
     }
 
     .experience-event {
-        gap: 24px;
-
-        padding-bottom: 50px;
+        border-radius:
+            var(--radius-medium);
     }
 
-    .experience-event-media {
-        aspect-ratio:
-            4 / 3;
-
-        border-radius: 14px;
+    .experience-event-content,
+    .experience-event-reverse
+    .experience-event-content {
+        padding:
+            28px
+            22px;
     }
 
     .experience-event-content h3 {
         font-size:
             clamp(
-                1.9rem,
-                9vw,
-                2.8rem
+                1.8rem,
+                8.5vw,
+                2.7rem
             );
     }
 
+    .experience-event-media img {
+        aspect-ratio:
+            4 / 3;
+    }
+
+    .experience-event-media figcaption {
+        padding:
+            11px
+            13px;
+
+        font-size: 0.63rem;
+    }
+
 }
+
