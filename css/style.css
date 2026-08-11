@@ -1,7 +1,7 @@
 /* =========================================================
    RONALD SARASWAT — SCIENTIFIC PORTFOLIO
    FINAL MASTER STYLESHEET
-   Version 23 — RECOVERED CONSOLIDATED MASTER
+   Version 24 — FINAL CONSOLIDATED MASTER
    August 2026
 ========================================================= */
 
@@ -445,6 +445,15 @@ textarea:focus-visible {
     color: var(--accent);
 }
 
+
+
+
+/* Disabled action state (used while the contact form is sending) */
+.button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
 
 /* =========================================================
    06. HOME HERO
@@ -4353,6 +4362,23 @@ p:not(.eyebrow) {
     padding-left: 4px;
 
     color: var(--accent);
+}
+
+/* Contact form feedback */
+.form-status {
+    min-height: 24px;
+    margin: 16px 0 0;
+    color: var(--text-secondary);
+    font-size: 0.80rem;
+    line-height: 1.55;
+}
+
+.form-status.success {
+    color: var(--accent-dark);
+}
+
+.form-status.error {
+    color: #a33f3f;
 }
 
 .form-honeypot {
