@@ -5991,3 +5991,456 @@ figcaption {
     }
 }
 
+
+
+/* =========================================================
+   V21 — FINAL MOBILE NAVIGATION
+   Editorial full-screen portfolio menu
+   Append at the absolute end of style.css
+========================================================= */
+
+
+/* Switch to the compact navigation slightly earlier.
+   This avoids the full nine-link navigation becoming cramped
+   on tablets / smaller landscape screens. */
+
+@media (max-width: 1100px) {
+
+    .nav-container {
+        height: 70px;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU BUTTON
+    ----------------------------------------------------- */
+
+    .menu-toggle {
+        position: relative;
+        z-index: 1400;
+
+        width: auto;
+        height: 44px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 11px;
+
+        padding:
+            0
+            2px
+            0
+            14px;
+
+        border: 0;
+
+        background: transparent;
+
+        color: var(--text-primary);
+    }
+
+
+    /* Visible word makes mobile navigation unmistakable */
+
+    .menu-toggle::before {
+        content: "Menu";
+
+        color: var(--text-primary);
+
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+
+        text-transform: uppercase;
+
+        transition:
+            color 180ms ease;
+    }
+
+
+    /* Container for the two lines */
+
+    .menu-toggle span {
+        position: absolute;
+        right: 2px;
+
+        width: 21px;
+        height: 1.5px;
+
+        margin: 0;
+
+        background: var(--text-primary);
+
+        transform-origin: center;
+
+        transition:
+            transform 200ms ease,
+            opacity 180ms ease,
+            background 180ms ease;
+    }
+
+    .menu-toggle span:first-child {
+        top: 17px;
+    }
+
+    .menu-toggle span:last-child {
+        top: 25px;
+    }
+
+
+    /* Give the word enough room before the icon */
+
+    .menu-toggle {
+        padding-right: 31px;
+    }
+
+
+    /* OPEN STATE */
+
+    .menu-toggle.active::before {
+        content: "Close";
+    }
+
+    .menu-toggle.active span:first-child {
+        top: 21px;
+
+        transform:
+            rotate(45deg);
+    }
+
+    .menu-toggle.active span:last-child {
+        top: 21px;
+
+        transform:
+            rotate(-45deg);
+    }
+
+
+    /* -----------------------------------------------------
+       FULL-SCREEN NAVIGATION
+    ----------------------------------------------------- */
+
+    .site-nav {
+        position: fixed;
+
+        inset:
+            70px
+            0
+            0
+            0;
+
+        z-index: 1300;
+
+        width: 100%;
+        height:
+            calc(
+                100dvh - 70px
+            );
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding:
+            clamp(
+                30px,
+                6vh,
+                62px
+            )
+            max(
+                5%,
+                calc(
+                    (100vw - 900px) / 2
+                )
+            )
+            46px;
+
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+        background:
+            rgba(
+                243,
+                244,
+                240,
+                0.985
+            );
+
+        backdrop-filter:
+            blur(22px);
+
+        -webkit-backdrop-filter:
+            blur(22px);
+
+        transform:
+            translateX(100%);
+
+        visibility: hidden;
+
+        transition:
+            transform 260ms cubic-bezier(
+                0.22,
+                1,
+                0.36,
+                1
+            ),
+            visibility 260ms;
+    }
+
+
+    .site-nav.open {
+        transform:
+            translateX(0);
+
+        visibility: visible;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU LINKS
+    ----------------------------------------------------- */
+
+    .site-nav {
+        counter-reset:
+            portfolio-nav;
+    }
+
+    .site-nav a {
+        counter-increment:
+            portfolio-nav;
+
+        position: relative;
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            42px
+            minmax(
+                0,
+                1fr
+            )
+            auto;
+
+        align-items: center;
+
+        gap: 16px;
+
+        padding:
+            15px
+            0;
+
+        border-bottom:
+            1px solid
+            var(--border);
+
+        color:
+            var(--text-primary);
+
+        font-size:
+            clamp(
+                1.45rem,
+                4.2vw,
+                2.25rem
+            );
+
+        font-weight: 600;
+
+        line-height: 1.1;
+
+        letter-spacing:
+            -0.035em;
+
+        white-space: normal;
+
+        transition:
+            color 180ms ease,
+            padding-left 180ms ease;
+    }
+
+
+    /* 01, 02, 03 ... */
+
+    .site-nav a::before {
+        content:
+            counter(
+                portfolio-nav,
+                decimal-leading-zero
+            );
+
+        color:
+            var(--accent);
+
+        font-size: 0.66rem;
+        font-weight: 760;
+
+        line-height: 1;
+
+        letter-spacing: 0.07em;
+    }
+
+
+    /* Arrow */
+
+    .site-nav a::after {
+        content: "↗";
+
+        position: static;
+
+        width: auto;
+        height: auto;
+
+        display: block;
+
+        background: none;
+
+        color:
+            rgba(
+                49,
+                92,
+                89,
+                0.52
+            );
+
+        font-size: 0.9rem;
+        font-weight: 500;
+
+        transform: none;
+
+        transition:
+            transform 180ms ease,
+            color 180ms ease;
+    }
+
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+        padding-left: 5px;
+
+        color: var(--accent-dark);
+    }
+
+    .site-nav a:hover::after,
+    .site-nav a:focus-visible::after {
+        transform:
+            translate(
+                3px,
+                -2px
+            );
+
+        color: var(--accent);
+    }
+
+
+    /* Current page */
+
+    .site-nav a[aria-current="page"] {
+        color: var(--accent-dark);
+
+        font-weight: 700;
+    }
+
+    .site-nav a[aria-current="page"]::before {
+        color: var(--text-primary);
+    }
+
+
+    /* Remove old desktop underline behaviour */
+
+    .site-nav a[aria-current="page"]::after {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        width: 90%;
+    }
+
+
+    .site-nav {
+        padding:
+            26px
+            5%
+            38px;
+    }
+
+
+    .site-nav a {
+        grid-template-columns:
+            34px
+            minmax(
+                0,
+                1fr
+            )
+            auto;
+
+        gap: 11px;
+
+        padding:
+            14px
+            0;
+
+        font-size:
+            clamp(
+                1.35rem,
+                7vw,
+                1.78rem
+            );
+    }
+
+
+    .site-nav a::before {
+        font-size: 0.61rem;
+    }
+
+
+    .menu-toggle::before {
+        font-size: 0.7rem;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SHORT PHONE / LANDSCAPE
+========================================================= */
+
+@media (
+    max-width: 950px
+) and (
+    max-height: 600px
+) {
+
+    .site-nav {
+        padding-top: 18px;
+    }
+
+    .site-nav a {
+        padding:
+            10px
+            0;
+
+        font-size:
+            clamp(
+                1.12rem,
+                4.6vh,
+                1.45rem
+            );
+    }
+
+}
+
