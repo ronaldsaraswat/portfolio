@@ -1,0 +1,519 @@
+/* =========================================================
+   EXTERNAL RECORDS — PAGE-SPECIFIC STYLESHEET
+   August 2026
+
+   Load AFTER /css/style.css on /mentions/ only.
+   This file does not replace the master stylesheet.
+========================================================= */
+
+.external-records-hero .page-hero-inner {
+    max-width: 1100px;
+}
+
+.external-records-hero h1 {
+    max-width: 1000px;
+}
+
+.external-records-section {
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space);
+}
+
+.external-records-header {
+    margin-bottom: 36px;
+}
+
+
+/* =========================================================
+   DIRECT RECORD GRID
+========================================================= */
+
+.external-record-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.external-record-card {
+    min-width: 0;
+}
+
+.external-link-preview {
+    height: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    background: rgba(255, 255, 255, 0.80);
+
+    box-shadow:
+        0 12px 30px
+        rgba(21, 36, 38, 0.045);
+
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+}
+
+.external-link-preview:hover,
+.external-link-preview:focus-visible {
+    transform: translateY(-3px);
+    border-color: rgba(49, 92, 89, 0.34);
+    background: #ffffff;
+    box-shadow: var(--shadow);
+}
+
+
+/* Browser-like strip: makes each item read immediately as an external-page preview. */
+
+.external-browser-bar {
+    min-height: 42px;
+
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 14px;
+
+    border-bottom: 1px solid var(--border);
+
+    background: #eef1ed;
+
+    color: var(--text-muted);
+
+    font-size: 0.67rem;
+    line-height: 1;
+}
+
+.external-browser-dots {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.external-browser-dots i {
+    width: 5px;
+    height: 5px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background: rgba(22, 32, 42, 0.28);
+}
+
+.external-browser-domain {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.external-browser-arrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   PREVIEW CONTENT
+========================================================= */
+
+.external-preview-body {
+    flex: 1;
+
+    padding: 22px 21px 24px;
+}
+
+.external-preview-source {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.external-source-mark {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(49, 92, 89, 0.25);
+    border-radius: 50%;
+
+    background: var(--surface);
+    color: var(--accent-dark);
+
+    font-size: 0.61rem;
+    font-weight: 780;
+    letter-spacing: 0.04em;
+}
+
+.external-preview-source strong,
+.external-preview-source span {
+    display: block;
+}
+
+.external-preview-source strong {
+    color: var(--text-primary);
+
+    font-size: 0.79rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.external-preview-source span {
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.66rem;
+    line-height: 1.4;
+}
+
+.external-preview-body h3 {
+    margin: 0 0 13px;
+
+    color: var(--text-primary);
+
+    font-size:
+        clamp(
+            1.22rem,
+            1.65vw,
+            1.58rem
+        );
+
+    font-weight: 620;
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+}
+
+.external-preview-body > p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.87rem;
+    line-height: 1.62;
+}
+
+.external-preview-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding: 12px 16px;
+
+    border-top: 1px solid var(--border);
+
+    background: rgba(243, 244, 240, 0.62);
+
+    color: var(--text-secondary);
+
+    font-size: 0.65rem;
+    line-height: 1.4;
+}
+
+.external-preview-footer > span {
+    min-width: 0;
+}
+
+.external-preview-footer strong {
+    flex: 0 0 auto;
+
+    color: var(--accent-dark);
+
+    font-size: 0.66rem;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   PROGRAMME RECORDS
+========================================================= */
+
+.external-context-section {
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space);
+}
+
+.external-context-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-top: 38px;
+}
+
+.external-context-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    background: var(--surface);
+
+    box-shadow:
+        0 12px 30px
+        rgba(21, 36, 38, 0.045);
+}
+
+.external-context-link {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.external-context-copy {
+    flex: 1;
+
+    padding: 25px 23px 27px;
+}
+
+.external-context-source {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: var(--accent);
+
+    font-size: 0.66rem;
+    font-weight: 760;
+    letter-spacing: 0.075em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.external-context-copy h3 {
+    max-width: 620px;
+
+    margin: 0 0 14px;
+
+    color: var(--text-primary);
+
+    font-size:
+        clamp(
+            1.35rem,
+            2.1vw,
+            1.9rem
+        );
+
+    font-weight: 620;
+    line-height: 1.16;
+    letter-spacing: -0.028em;
+}
+
+.external-context-copy p {
+    max-width: 620px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.89rem;
+    line-height: 1.65;
+}
+
+.external-context-copy > strong {
+    display: inline-block;
+
+    margin-top: 21px;
+
+    color: var(--accent-dark);
+
+    font-size: 0.75rem;
+    font-weight: 750;
+}
+
+.external-context-video {
+    display: flex;
+    flex-direction: column;
+}
+
+.external-video-frame {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--border);
+
+    background: var(--dark);
+}
+
+.external-video-frame iframe {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   SCOPE NOTE
+========================================================= */
+
+.external-scope-note {
+    width: min(92%, var(--content-width));
+
+    margin: 0 auto;
+    padding: 0 0 var(--section-space-compact);
+}
+
+.external-scope-note > div {
+    display: grid;
+    grid-template-columns: minmax(100px, 0.24fr) minmax(0, 1.76fr);
+
+    gap: 28px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.external-scope-note strong {
+    color: var(--accent);
+
+    font-size: 0.69rem;
+    font-weight: 760;
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+}
+
+.external-scope-note p {
+    max-width: 780px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.84rem;
+    line-height: 1.62;
+}
+
+
+/* =========================================================
+   SMALL DESKTOP / TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .external-record-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .external-link-preview {
+        min-height: 360px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .external-record-grid,
+    .external-context-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .external-link-preview {
+        min-height: 0;
+    }
+
+    .external-scope-note > div {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .external-records-header {
+        margin-bottom: 28px;
+    }
+
+    .external-browser-bar {
+        min-height: 39px;
+        padding: 0 12px;
+    }
+
+    .external-preview-body {
+        padding: 20px 18px 22px;
+    }
+
+    .external-preview-source {
+        margin-bottom: 21px;
+    }
+
+    .external-source-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 0.58rem;
+    }
+
+    .external-preview-body h3 {
+        font-size:
+            clamp(
+                1.25rem,
+                6.6vw,
+                1.65rem
+            );
+    }
+
+    .external-preview-footer {
+        align-items: flex-start;
+        padding: 11px 13px;
+    }
+
+    .external-preview-footer > span {
+        max-width: 58%;
+    }
+
+    .external-context-grid {
+        margin-top: 30px;
+    }
+
+    .external-context-copy {
+        padding: 22px 18px 24px;
+    }
+
+    .external-scope-note {
+        width: 90%;
+        padding-bottom: 52px;
+    }
+
+}
