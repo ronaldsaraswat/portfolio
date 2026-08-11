@@ -5821,3 +5821,173 @@ figcaption {
     }
 
 }
+
+
+/* =========================================================
+   HOME + ABOUT FINAL PROPORTION PATCH
+   Append this block to the END of your existing style.css.
+========================================================= */
+
+
+/* HOME — ABOUT PORTRAIT */
+
+.home-about-grid {
+    align-items: start;
+}
+
+.home-about-heading {
+    min-width: 0;
+}
+
+.home-portrait {
+    width: min(100%, 390px);
+    margin: 42px 0 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius-medium);
+    background: var(--surface-soft);
+    box-shadow: var(--shadow);
+}
+
+.home-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 32%;
+}
+
+
+/* HOME — COMMUNITY PHOTO
+   Wide photograph should read as a supporting visual, not a full-page block. */
+
+.home-community-photo {
+    width: min(100%, 1120px);
+    margin: 52px auto 0;
+    overflow: hidden;
+    aspect-ratio: 16 / 7.2;
+    border-radius: var(--radius-medium);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.home-community-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 52%;
+}
+
+
+/* ABOUT — MAIN PORTRAIT
+   Prevent portrait from becoming a very tall column on iPad/desktop. */
+
+.about-portrait-final {
+    width: min(100%, 385px);
+    max-width: 385px;
+    margin-top: 42px;
+    aspect-ratio: 4 / 5;
+}
+
+.about-portrait-final img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+
+/* ABOUT — EDITORIAL PHOTOGRAPHS
+   Keep them large enough to matter, but visibly secondary to the biography. */
+
+.about-editorial-final {
+    width: min(68%, 820px);
+}
+
+.about-editorial-final img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+/* Student ambassador image is portrait-biased; contain subject without an oversized card. */
+.about-editorial-right.about-editorial-final img {
+    object-position: center 45%;
+}
+
+/* Google outreach photograph works better as a wider editorial crop. */
+.about-editorial-left.about-editorial-final img {
+    object-position: center 48%;
+}
+
+
+/* ABOUT — reduce unnecessary vertical separation around standalone images */
+
+.about-visual-break {
+    padding-bottom: clamp(62px, 6vw, 88px);
+}
+
+
+/* HOME/ABOUT — slightly tighten large-copy typography on tablets
+   to avoid text/image imbalance. */
+
+@media (max-width: 1050px) {
+    .home-portrait,
+    .about-portrait-final {
+        width: min(100%, 350px);
+    }
+
+    .home-community-photo {
+        aspect-ratio: 16 / 8;
+    }
+
+    .about-editorial-final {
+        width: min(76%, 760px);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .home-portrait,
+    .about-portrait-final {
+        width: min(100%, 390px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home-community-photo {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .about-editorial-final {
+        width: min(88%, 720px);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .home-portrait,
+    .about-portrait-final {
+        width: 100%;
+        max-width: 360px;
+        aspect-ratio: 4 / 5;
+    }
+
+    .home-community-photo {
+        aspect-ratio: 4 / 3;
+        border-radius: 14px;
+    }
+
+    .about-editorial-final {
+        width: 100%;
+    }
+
+    .about-editorial-final img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .about-visual-break {
+        padding-bottom: 54px;
+    }
+}
+
