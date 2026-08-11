@@ -362,7 +362,7 @@ textarea:focus-visible {
     flex-wrap: wrap;
     align-items: center;
 
-    gap: 11px;
+    gap: 16px;
 
     margin-top: 30px;
 }
