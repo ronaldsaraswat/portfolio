@@ -12,6 +12,68 @@ const navigationLinks =
     document.querySelectorAll(".site-nav a");
 
 
+const closeNavigation = () => {
+
+    if (!menuButton || !navigation) {
+        return;
+    }
+
+    navigation.classList.remove(
+        "open"
+    );
+
+    menuButton.classList.remove(
+        "active"
+    );
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    menuButton.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+
+    document.body.classList.remove(
+        "menu-open"
+    );
+
+};
+
+
+const openNavigation = () => {
+
+    if (!menuButton || !navigation) {
+        return;
+    }
+
+    navigation.classList.add(
+        "open"
+    );
+
+    menuButton.classList.add(
+        "active"
+    );
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+    menuButton.setAttribute(
+        "aria-label",
+        "Close navigation menu"
+    );
+
+    document.body.classList.add(
+        "menu-open"
+    );
+
+};
+
+
 if (menuButton && navigation) {
 
     menuButton.addEventListener(
@@ -19,22 +81,15 @@ if (menuButton && navigation) {
         () => {
 
             const isOpen =
-                navigation.classList.toggle("open");
+                navigation.classList.contains(
+                    "open"
+                );
 
-            menuButton.classList.toggle(
-                "active",
-                isOpen
-            );
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                isOpen
-            );
-
-            document.body.classList.toggle(
-                "menu-open",
-                isOpen
-            );
+            if (isOpen) {
+                closeNavigation();
+            } else {
+                openNavigation();
+            }
 
         }
     );
@@ -45,27 +100,46 @@ if (menuButton && navigation) {
 
             link.addEventListener(
                 "click",
-                () => {
-
-                    navigation.classList.remove(
-                        "open"
-                    );
-
-                    menuButton.classList.remove(
-                        "active"
-                    );
-
-                    menuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                    document.body.classList.remove(
-                        "menu-open"
-                    );
-
-                }
+                closeNavigation
             );
+
+        }
+    );
+
+
+    /* Escape closes menu */
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key ===
+                "Escape"
+            ) {
+                closeNavigation();
+            }
+
+        }
+    );
+
+
+    /*
+       If device orientation changes or browser
+       becomes desktop-sized while menu is open,
+       restore normal page state.
+    */
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (
+                window.innerWidth >
+                1100
+            ) {
+                closeNavigation();
+            }
 
         }
     );
