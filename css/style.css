@@ -1,7 +1,7 @@
 /* =========================================================
    RONALD SARASWAT — SCIENTIFIC PORTFOLIO
    FINAL MASTER STYLESHEET
-   Version 17
+   Version 20
    August 2026
 ========================================================= */
 
@@ -42,16 +42,16 @@
 
     --section-space:
         clamp(
-            78px,
-            7.2vw,
-            108px
+            70px,
+            6.4vw,
+            96px
         );
 
     --section-space-compact:
         clamp(
-            62px,
-            6vw,
-            88px
+            56px,
+            5.3vw,
+            78px
         );
 
     --shadow:
@@ -926,6 +926,32 @@ textarea:focus-visible {
             255,
             0.13
         );
+}
+
+
+
+/* Dark cards: explicit contrast rather than inheriting light-card rules */
+.section-dark .research-card {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+}
+
+.section-dark .research-card:hover {
+    background: rgba(255, 255, 255, 0.085);
+    box-shadow: none;
+}
+
+.section-dark .research-card h3 {
+    color: #ffffff;
+}
+
+.section-dark .research-card p {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.section-dark .research-card .eyebrow {
+    color: var(--publication-accent-light);
 }
 
 
@@ -3122,7 +3148,7 @@ textarea:focus-visible {
     display: grid;
 
     grid-template-rows:
-        minmax(0, 1fr)
+        auto
         auto;
 
     margin: 0;
@@ -3279,8 +3305,14 @@ p:not(.eyebrow) {
 
 
 /* =========================================================
-   20. COMMUNITY
+   20. COMMUNITY — FINAL CURATED EDITORIAL SYSTEM
 ========================================================= */
+
+/*
+   The Community page intentionally avoids a large mixed-ratio mosaic.
+   Photographs are curated by purpose:
+   1 lead image, 3 programme images, 2 outreach images.
+*/
 
 .communication-section {
     width: 100%;
@@ -3298,62 +3330,207 @@ p:not(.eyebrow) {
     background: var(--accent-soft);
 }
 
-.communication-grid {
+
+/* LEAD PHOTOGRAPH */
+
+.community-lead-section {
+    width:
+        min(
+            92%,
+            var(--content-width)
+        );
+
+    margin: 0 auto;
+
+    padding:
+        clamp(
+            44px,
+            4.8vw,
+            64px
+        )
+        0
+        var(--section-space-compact);
+}
+
+.community-lead-figure {
+    width:
+        min(
+            100%,
+            1040px
+        );
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius-large);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow);
+}
+
+.community-lead-figure img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 3 / 2;
+
+    object-fit: cover;
+    object-position: center 48%;
+
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.community-photo-caption {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.8fr)
-        minmax(0, 1.2fr);
+        minmax(145px, 0.35fr)
+        minmax(0, 1.65fr);
 
     gap:
         clamp(
-            48px,
-            7vw,
-            100px
+            18px,
+            3vw,
+            38px
+        );
+
+    padding:
+        14px
+        17px
+        15px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    background: var(--surface);
+}
+
+.community-photo-caption span {
+    color: var(--accent);
+
+    font-size: 0.65rem;
+    font-weight: 760;
+    line-height: 1.45;
+    letter-spacing: 0.085em;
+
+    text-transform: uppercase;
+}
+
+.community-photo-caption p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
+
+/* FIVE CHAPTERS */
+
+.community-chapter-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 11px;
+}
+
+.community-chapter-card {
+    min-width: 0;
+
+    padding:
+        clamp(
+            23px,
+            2.8vw,
+            32px
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius-medium);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.66
         );
 }
 
-.communication-feature {
-    max-width: 720px;
+.community-chapter-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
 }
 
-.communication-feature h3 {
+.community-chapter-card span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 0.67rem;
+    font-weight: 760;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.community-chapter-card h3 {
     margin:
         0
         0
-        24px;
+        10px;
 
     color: var(--text-primary);
 
     font-size:
         clamp(
-            1.85rem,
-            3.45vw,
-            3.55rem
+            1.28rem,
+            2vw,
+            1.75rem
         );
 
-    font-weight: 580;
-    letter-spacing: -0.043em;
-    line-height: 1.1;
+    font-weight: 650;
+    line-height: 1.16;
+    letter-spacing: -0.025em;
 }
 
-.communication-feature > p:not(.eyebrow) {
+.community-chapter-card p {
     max-width: 620px;
+
+    margin: 0;
 
     color: var(--text-secondary);
 
-    font-size: 0.98rem;
-    line-height: 1.72;
+    font-size: 0.89rem;
+    line-height: 1.64;
 }
 
-.communication-feature-gallery {
-    width: 100%;
-    max-width: 1040px;
 
-    margin:
-        46px
-        auto
-        0;
+/* THREE PROGRAMME PHOTOGRAPHS */
+
+.community-practice-grid {
+    width: 100%;
 
     display: grid;
 
@@ -3366,27 +3543,138 @@ p:not(.eyebrow) {
     gap: 14px;
 }
 
-.communication-feature-gallery > :only-child {
-    grid-column: 1 / -1;
-
-    width: 100%;
-    max-width: 760px;
-
-    justify-self: center;
-}
-
-.communication-feature-photo {
-    position: relative;
+.community-practice-card {
+    min-width: 0;
 
     margin: 0;
 
     overflow: hidden;
 
-    aspect-ratio: 16 / 10;
+    display: grid;
+
+    grid-template-rows:
+        auto
+        1fr;
 
     border:
         1px solid
-        var(--border-soft);
+        var(--border);
+
+    border-radius: var(--radius-medium);
+
+    background: var(--surface);
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            21,
+            36,
+            38,
+            0.055
+        );
+}
+
+.community-practice-card img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+    object-position: center;
+
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.community-practice-card:nth-child(1) img {
+    object-position: center 52%;
+}
+
+.community-practice-card:nth-child(2) img {
+    object-position: center 50%;
+}
+
+.community-practice-card:nth-child(3) {
+    grid-column: 1 / -1;
+
+    width:
+        min(
+            76%,
+            820px
+        );
+
+    justify-self: center;
+}
+
+.community-practice-card:nth-child(3) img {
+    aspect-ratio: 3 / 2;
+    object-position: center 50%;
+}
+
+.community-practice-card figcaption {
+    padding:
+        12px
+        14px
+        13px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    background: var(--surface);
+
+    color: var(--text-secondary);
+
+    font-size: 0.71rem;
+    line-height: 1.5;
+}
+
+.community-practice-card figcaption strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--accent-dark);
+
+    font-size: 0.67rem;
+    font-weight: 760;
+    letter-spacing: 0.065em;
+
+    text-transform: uppercase;
+}
+
+
+/* FORMAT + SUPPORT: one concise section instead of two long blocks */
+
+.community-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+}
+
+.community-info-panel {
+    min-width: 0;
+
+    padding:
+        clamp(
+            27px,
+            3.5vw,
+            40px
+        );
+
+    border:
+        1px solid
+        var(--border);
 
     border-radius: var(--radius-medium);
 
@@ -3395,107 +3683,97 @@ p:not(.eyebrow) {
             255,
             255,
             255,
-            0.60
+            0.64
+        );
+}
+
+.community-info-panel .eyebrow {
+    margin-bottom: 14px;
+}
+
+.community-info-panel h3 {
+    margin:
+        0
+        0
+        21px;
+
+    color: var(--text-primary);
+
+    font-size:
+        clamp(
+            1.55rem,
+            2.6vw,
+            2.35rem
         );
 
-    box-shadow: var(--shadow);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
 }
 
-.communication-feature-photo img {
-    width: 100%;
-    height: 100%;
+.community-info-list {
+    margin: 0;
 
-    object-fit: cover;
-
-    pointer-events: none;
-
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
-
-    transition: transform 280ms ease;
+    border-top:
+        1px solid
+        var(--border);
 }
 
-.communication-feature-photo:hover img {
-    transform: scale(1.012);
-}
-
-.communication-mosaic {
-    width: 100%;
-    max-width: 1040px;
-
-    margin:
-        12px
-        auto
-        0;
-
+.community-info-row {
     display: grid;
 
     grid-template-columns:
-        repeat(
-            4,
-            minmax(0, 1fr)
-        );
+        minmax(95px, 0.42fr)
+        minmax(0, 1.58fr);
 
-    gap: 9px;
+    gap: 18px;
+
+    padding:
+        13px
+        0;
+
+    border-bottom:
+        1px solid
+        var(--border);
 }
 
-.communication-mosaic-item {
-    position: relative;
+.community-info-row span {
+    color: var(--accent);
 
-    overflow: hidden;
-
-    aspect-ratio: 4 / 3;
-
-    border-radius: 11px;
-
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.58
-        );
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
-.communication-mosaic-item img {
-    width: 100%;
-    height: 100%;
+.community-info-row strong {
+    color: var(--text-primary);
 
-    object-fit: cover;
-
-    pointer-events: none;
-
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
-
-    transition: transform 240ms ease;
+    font-size: 0.86rem;
+    font-weight: 640;
+    line-height: 1.55;
 }
 
-.communication-mosaic-item:hover img {
-    transform: scale(1.015);
-}
+
+/* MAINZ OUTREACH — LANDSCAPE PHOTO + UNCROPPED POSTER */
 
 .community-outreach-gallery {
     width: 100%;
 
-    margin-top: 30px;
+    margin-top: 28px;
 
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.25fr)
-        minmax(240px, 0.75fr);
+        minmax(0, 1.32fr)
+        minmax(240px, 0.68fr);
 
     gap: 12px;
 
-    align-items: stretch;
+    align-items: start;
 }
 
 .community-outreach-gallery figure {
+    min-width: 0;
+
     margin: 0;
 
     overflow: hidden;
@@ -3519,24 +3797,42 @@ p:not(.eyebrow) {
 
 .community-outreach-main img {
     width: 100%;
-    height: 100%;
+    height: auto;
 
-    min-height: 320px;
+    aspect-ratio: 3 / 2;
 
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
+
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.community-outreach-secondary {
+    background: #ffffff;
 }
 
 .community-outreach-secondary img {
     width: 100%;
-    height: 100%;
+    height: auto;
 
-    min-height: 320px;
+    max-height: 560px;
+
+    padding: 10px;
 
     object-fit: contain;
     object-position: center;
 
     background: #ffffff;
+
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
 }
 
 .community-outreach-gallery figcaption {
@@ -3554,11 +3850,131 @@ p:not(.eyebrow) {
 
     font-size: 0.65rem;
     font-weight: 680;
-    letter-spacing: 0.055em;
+    letter-spacing: 0.05em;
     line-height: 1.42;
 
     text-transform: uppercase;
 }
+
+
+/* COMMUNITY TABLET */
+
+@media (max-width: 900px) {
+
+    .community-practice-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+    .community-practice-card:last-child {
+        grid-column: 1 / -1;
+
+        width:
+            min(
+                82%,
+                660px
+            );
+
+        justify-self: center;
+    }
+
+    .community-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-outreach-gallery {
+        grid-template-columns:
+            minmax(0, 1.15fr)
+            minmax(220px, 0.85fr);
+    }
+
+}
+
+
+/* COMMUNITY MOBILE */
+
+@media (max-width: 600px) {
+
+    .community-lead-section {
+        width: 90%;
+
+        padding-top: 34px;
+        padding-bottom: 54px;
+    }
+
+    .community-lead-figure {
+        border-radius: var(--radius-medium);
+    }
+
+    .community-lead-figure img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .community-photo-caption {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        padding:
+            12px
+            13px
+            13px;
+    }
+
+    .community-chapter-grid,
+    .community-practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-chapter-card:last-child:nth-child(odd) {
+        grid-column: auto;
+    }
+
+    .community-practice-card,
+    .community-practice-card:last-child {
+        grid-column: auto;
+
+        width: 100%;
+
+        justify-self: stretch;
+    }
+
+    .community-info-panel {
+        padding:
+            23px
+            20px;
+    }
+
+    .community-info-row {
+        grid-template-columns: 1fr;
+
+        gap: 4px;
+    }
+
+    .community-outreach-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .community-outreach-main img {
+        min-height: 0;
+
+        aspect-ratio: 4 / 3;
+    }
+
+    .community-outreach-secondary img {
+        height: auto;
+        max-height: none;
+
+        object-fit: contain;
+    }
+
+}
+
 
 
 /* =========================================================
@@ -4156,6 +4572,24 @@ p:not(.eyebrow) {
 }
 
 
+
+
+/* V20 refinement: balanced headings and resilient caption contrast */
+h1,
+h2,
+h3 {
+    text-wrap: balance;
+}
+
+figcaption {
+    color: var(--text-secondary);
+}
+
+.section-dark figcaption {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
 /* =========================================================
    25. DESKTOP / SMALL LAPTOP
 ========================================================= */
@@ -4620,14 +5054,19 @@ p:not(.eyebrow) {
         max-width: 100%;
 
         grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
+            minmax(0, 1.08fr)
+            minmax(0, 0.92fr);
+
+        gap: 10px;
+    }
+
+    .communication-feature-gallery > figure {
+        height:
+            clamp(
+                285px,
+                38vw,
+                340px
             );
-
-        gap: 11px;
-
-        margin-top: 42px;
     }
 
     .communication-mosaic {
@@ -4635,22 +5074,33 @@ p:not(.eyebrow) {
 
         grid-template-columns:
             repeat(
-                4,
+                2,
                 minmax(0, 1fr)
             );
 
-        gap: 7px;
+        grid-auto-rows:
+            clamp(
+                190px,
+                26vw,
+                230px
+            );
+
+        gap: 9px;
     }
 
     .community-outreach-gallery {
         grid-template-columns:
-            1fr
-            0.72fr;
+            minmax(0, 1.18fr)
+            minmax(220px, 0.82fr);
     }
 
-    .community-outreach-main img,
-    .community-outreach-secondary img {
-        min-height: 280px;
+    .community-outreach-gallery figure {
+        height:
+            clamp(
+                340px,
+                48vw,
+                420px
+            );
     }
 
     .contact-grid {
@@ -5118,6 +5568,11 @@ p:not(.eyebrow) {
         font-size: 0.61rem;
     }
 
+    .community-feature-visuals {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     .communication-feature-gallery {
         width: 100%;
         max-width: 520px;
@@ -5126,16 +5581,19 @@ p:not(.eyebrow) {
 
         gap: 9px;
 
-        margin:
-            36px
-            auto
-            0;
+        margin: 0 auto;
     }
 
-    .communication-feature-photo {
+    .communication-feature-gallery > figure {
+        height: auto;
+
         aspect-ratio: 4 / 3;
 
         border-radius: 13px;
+    }
+
+    .communication-feature-gallery > figure:first-child {
+        aspect-ratio: 3 / 2;
     }
 
     .communication-mosaic {
@@ -5148,17 +5606,22 @@ p:not(.eyebrow) {
                 minmax(0, 1fr)
             );
 
+        grid-auto-rows:
+            clamp(
+                118px,
+                34vw,
+                148px
+            );
+
         gap: 7px;
 
         margin:
-            8px
+            6px
             auto
             0;
     }
 
-    .communication-mosaic-item {
-        aspect-ratio: 1 / 1;
-
+    .communication-mosaic > img {
         border-radius: 9px;
     }
 
@@ -5168,15 +5631,22 @@ p:not(.eyebrow) {
         gap: 9px;
     }
 
+    .community-outreach-gallery figure {
+        height: auto;
+    }
+
     .community-outreach-main img {
-        min-height: 0;
+        height: auto;
 
         aspect-ratio: 4 / 3;
+
+        object-fit: cover;
     }
 
     .community-outreach-secondary img {
         height: auto;
-        min-height: 0;
+
+        padding: 8px;
 
         object-fit: contain;
     }
@@ -5304,6 +5774,50 @@ p:not(.eyebrow) {
     *::after {
         transition: none !important;
         animation: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   V19 FINAL COMMUNITY RESPONSIVE LOCK
+   Kept last intentionally so historical gallery media rules
+   cannot override the curated Community composition.
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .community-outreach-gallery figure {
+        height: auto;
+    }
+
+    .community-outreach-main img {
+        min-height: 300px;
+    }
+
+    .community-outreach-secondary img {
+        height: auto;
+        max-height: 470px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .community-outreach-gallery figure {
+        height: auto;
+    }
+
+    .community-outreach-main img {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .community-outreach-secondary img {
+        height: auto;
+        max-height: none;
+        padding: 8px;
     }
 
 }
