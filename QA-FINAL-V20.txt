@@ -1,0 +1,80 @@
+FINAL V20 QA
+============================================================
+index.html:
+  title (49): Ronald Saraswat, PhD | Cell & Molecular Biologist
+  description (163): Scientific portfolio of Ronald Saraswat, PhD: cellular ageing, extracellular vesicles, quantitative cell biology, proteomics and translational biomedical research.
+  canonical: https://ronald.saraswatintegratedservices.com/
+  H1 count: 1
+  active nav: 1
+  image count: 3
+  JSON-LD parse errors: 0
+about/index.html:
+  title (55): About Ronald Saraswat, PhD | Cell & Molecular Biologist
+  description (168): Scientific biography of Ronald Saraswat, PhD, covering redox biology, extracellular vesicles, cellular ageing, proteomics, functional assays and international research.
+  canonical: https://ronald.saraswatintegratedservices.com/about/
+  H1 count: 1
+  active nav: 1
+  image count: 3
+  JSON-LD parse errors: 0
+community/index.html:
+  title (59): Gene & Tonic Cité & Science Communication | Ronald Saraswat
+  description (156): Gene & Tonic Cité, science communication and public engagement by Ronald Saraswat, PhD, including CIUP events, outreach, mentoring and community activities.
+  canonical: https://ronald.saraswatintegratedservices.com/community/
+  H1 count: 1
+  active nav: 1
+  image count: 6
+  JSON-LD parse errors: 0
+contact/index.html:
+  title (55): Contact Ronald Saraswat, PhD | Research & Collaboration
+  description (140): Contact Ronald Saraswat, PhD about research opportunities, scientific collaboration, translational biomedical R&D and science communication.
+  canonical: https://ronald.saraswatintegratedservices.com/contact/
+  H1 count: 1
+  active nav: 1
+  image count: 0
+  JSON-LD parse errors: 0
+cv/index.html:
+  title (54): CV | Ronald Saraswat, PhD | Cell & Molecular Biologist
+  description (155): Scientific CV of Ronald Saraswat, PhD: research appointments, education, cell and molecular biology expertise, recognition and professional qualifications.
+  canonical: https://ronald.saraswatintegratedservices.com/cv/
+  H1 count: 1
+  active nav: 1
+  image count: 0
+  JSON-LD parse errors: 0
+experience/index.html:
+  title (42): Research Experience | Ronald Saraswat, PhD
+  description (157): Research experience of Ronald Saraswat, PhD across Ireland, France and Germany, including MSCA TiCardio doctoral research, postdoctoral work and conferences.
+  canonical: https://ronald.saraswatintegratedservices.com/experience/
+  H1 count: 1
+  active nav: 1
+  image count: 5
+  JSON-LD parse errors: 0
+publications/index.html:
+  title (35): Publications | Ronald Saraswat, PhD
+  description (159): Selected publications, doctoral thesis and manuscript under peer review by Ronald Saraswat, PhD, spanning extracellular vesicles, thrombosis and redox biology.
+  canonical: https://ronald.saraswatintegratedservices.com/publications/
+  H1 count: 1
+  active nav: 1
+  image count: 0
+  JSON-LD parse errors: 0
+research/index.html:
+  title (31): Research | Ronald Saraswat, PhD
+  description (147): Research by Ronald Saraswat, PhD in endothelial ageing, cellular senescence, extracellular vesicles, quantitative functional assays and proteomics.
+  canonical: https://ronald.saraswatintegratedservices.com/research/
+  H1 count: 1
+  active nav: 1
+  image count: 3
+  JSON-LD parse errors: 0
+scientific-visuals/index.html:
+  title (41): Scientific Visuals | Ronald Saraswat, PhD
+  description (156): AI-assisted scientific visuals by Ronald Saraswat, PhD for cell biology, extracellular vesicles and ageing, with scientific review and explicit reuse terms.
+  canonical: https://ronald.saraswatintegratedservices.com/scientific-visuals/
+  H1 count: 1
+  active nav: 1
+  image count: 1
+  JSON-LD parse errors: 0
+
+Duplicate titles: 0
+Duplicate descriptions: 0
+CSS braces: 518 opening / 518 closing
+Missing referenced local image files: 0
+Sitemap URLs: 9
