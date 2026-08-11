@@ -1,0 +1,47 @@
+RONALD SARASWAT SCIENTIFIC PORTFOLIO — ASSET NAME LOCK
+Final package: V24 · 11 Aug 2026
+
+This package does not rename existing image assets. Keep these exact filenames in /assets/images/.
+
+HOME
+- hero-ev-communication.png                 ← homepage hero scientific artwork
+- ronald-saraswat-portrait.png              ← homepage/About portrait
+- gene-tonic-mosaic-02.jpg                  ← HOMEPAGE Gene & Tonic feature image (preferred)
+
+IMPORTANT
+- gene-tonic-mosaic-02.jpg is intentionally the HOME feature image.
+- Do NOT substitute gene-tonic-feature-audience.jpg for the homepage feature.
+- Do NOT rename hero-ev-communication.png.
+
+ABOUT
+- about-ireland-student-ambassador.jpg
+- about-science-outreach-google.jpg
+
+RESEARCH
+- research-artwork-cell-state-communication.png
+- research-artwork-ev-intercellular-communication.png
+- research-artwork-functional-delivery-quantitative-biology.png
+
+EXPERIENCE
+- experience-lab-scientist.png
+- experience-marseille-ticardio-innovte.jpg
+- experience-maastricht-young-investigator.jpg
+- experience-mcct-maastricht.jpg
+- experience-mainz-epigenetics-ageing.png
+
+COMMUNITY
+- gene-tonic-mosaic-02.jpg
+- gene-tonic-feature-audience.jpg
+- gene-tonic-feature-discussion.jpg
+- gene-tonic-mosaic-08.jpg
+- community-sip-of-science-mainz.jpg
+- community-sip-of-science-poster.jpg
+
+SCIENTIFIC VISUALS
+- scientific-visual-cellular-senescence.png
+
+SITE-WIDE
+- social-preview.png
+- rs-favicon.svg
+
+The page HTML references the exact names above. Upload the CSS as /css/style.css and JavaScript as /js/main.js.

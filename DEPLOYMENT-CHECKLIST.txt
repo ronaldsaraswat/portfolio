@@ -1,0 +1,28 @@
+RONALD SARASWAT SCIENTIFIC PORTFOLIO — FINAL DEPLOYMENT
+
+Replace/upload these files together, preserving the folder structure:
+
+/index.html
+/research/index.html
+/publications/index.html
+/experience/index.html
+/community/index.html
+/scientific-visuals/index.html
+/about/index.html
+/cv/index.html
+/contact/index.html
+/css/style.css
+/js/main.js
+/robots.txt
+/sitemap.xml
+
+CRITICAL
+1. Upload /css/style.css from THIS package. It is the complete consolidated master stylesheet, not a patch-only file.
+2. Every page in this package points to exactly: /css/style.css
+3. Do not add ?v=18, ?v=20, etc. Cache version numbers are deliberately removed.
+4. Homepage hero asset is /assets/images/hero-ev-communication.png.
+5. Homepage Gene & Tonic feature asset is /assets/images/gene-tonic-mosaic-02.jpg.
+6. Preserve all existing /assets/images/ files named in ASSET-MANIFEST.txt.
+7. Upload /js/main.js so the mobile menu and contact form behavior remain consistent.
+
+After GitHub Pages deploys, a normal browser reload should use the new files. CDN/browser caches may take a short time to expire; no per-page query-string maintenance is required.

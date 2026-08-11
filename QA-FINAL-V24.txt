@@ -1,0 +1,73 @@
+RONALD SARASWAT PORTFOLIO — FINAL QA V24
+11 August 2026
+
+PASS — COMPLETE STYLESHEET
+/css/style.css is the full consolidated master stylesheet (~99 KB), not a patch-only file.
+Contains the established design system, page layouts, Home/About proportion fixes, mobile navigation, CTA spacing and Community image rules.
+
+PASS — STYLESHEET REFERENCES
+All nine HTML pages reference exactly:
+/css/style.css
+No ?v=18, ?v=20 or other manual cache-version suffix remains.
+
+PASS — HOME IMAGE LOCKS
+Hero: /assets/images/hero-ev-communication.png
+Gene & Tonic homepage feature: /assets/images/gene-tonic-mosaic-02.jpg
+
+PASS — HOME CONTENT / SEO
+Final hero taxonomy includes:
+Extracellular Vesicles
+Cellular Ageing & Senescence
+Intercellular Communication
+Quantitative Cell Biology
+Proteomics
+Translational R&D
+
+Homepage About preview includes redox biology and oxidative stress.
+Person + WebSite JSON-LD parses correctly.
+No current worksFor claim for Université Paris Cité.
+
+PASS — ABOUT
+European research trajectory is foregrounded.
+BSc in Life Sciences in Delhi remains contextual educational background rather than a major research-career chapter.
+Hero wording distinguishes doctoral research in France/Germany from postdoctoral work in Paris.
+Oxidative stress is included naturally in the scientific biography.
+Fixed-term Université Paris Cité appointment is described historically.
+
+PASS — CONTACT FORM
+Formspree action preserved.
+JavaScript submit handler now has the required .form-submit and .form-status elements.
+Status region uses aria-live="polite".
+Double-submission prevention and success/error feedback are active when JavaScript is available; normal form submission remains available as fallback.
+
+PASS — MOBILE NAVIGATION
+Menu button and full-screen portfolio navigation are present on all pages.
+Escape closes the menu.
+ARIA expanded state and accessible label update correctly.
+Active-page navigation is normalised by main.js.
+
+PASS — SEO / INDEXING
+Unique titles and descriptions
+Self-referencing canonical URLs
+Open Graph metadata
+Twitter/X metadata
+Social preview dimensions: 1200 × 630
+Structured data parses as JSON
+One H1 per page
+Image alt attributes present
+robots.txt present
+sitemap.xml parses and contains all 9 public pages
+
+PASS — LOCAL ASSETS
+All local href/src references used by the nine pages resolve inside the package.
+rs-favicon.svg is included.
+Referenced raster images pass file verification.
+
+PASS — CODE VALIDATION
+JavaScript: node --check PASS
+CSS: tinycss2 parse PASS (0 top-level parse errors)
+JSON-LD: PASS on all 9 pages
+XML sitemap: PASS
+
+FINAL DEPLOYMENT NOTE
+Upload this package as a complete set. Do not replace /css/style.css with a small patch file.
