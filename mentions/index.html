@@ -105,7 +105,7 @@
 
         .extrec-preview {
             position: relative;
-            height: 150px;
+            height: 190px;
             overflow: hidden;
             border-bottom: 1px solid var(--border-soft);
             background: linear-gradient(135deg, rgba(49, 92, 89, 0.095), rgba(255, 255, 255, 0.74));
@@ -114,19 +114,9 @@
         .extrec-preview--text {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            padding: 22px 24px;
-        }
-
-        .extrec-preview--text::before {
-            content: "";
-            position: absolute;
-            width: 96px;
-            height: 96px;
-            right: 22px;
-            top: 18px;
-            border: 1px solid rgba(49, 92, 89, 0.16);
-            border-radius: 50%;
+            justify-content: center;
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(49, 92, 89, 0.07), rgba(255, 255, 255, 0.72));
         }
 
         .extrec-preview-code {
@@ -143,7 +133,7 @@
         .extrec-preview-source {
             position: relative;
             z-index: 1;
-            max-width: 80%;
+            max-width: 92%;
             color: var(--text-primary);
             font-size: 1.08rem;
             font-weight: 700;
@@ -184,7 +174,10 @@
         }
 
         .extrec-preview--portrait img {
-            object-position: center 31%;
+            object-fit: contain;
+            object-position: center center;
+            padding: 10px 0;
+            background: var(--surface-soft);
         }
 
         .extrec-preview--science img {
@@ -192,7 +185,7 @@
         }
 
         .extrec-preview--outreach img {
-            object-position: center 42%;
+            object-position: center 24%;
         }
 
         .extrec-body {
@@ -375,7 +368,7 @@
             }
 
             .extrec-preview {
-                height: 138px;
+                height: 170px;
             }
 
             .extrec-body {
@@ -399,7 +392,7 @@
             }
 
             .extrec-preview {
-                height: 124px;
+                height: 150px;
             }
 
             .extrec-preview--text {
