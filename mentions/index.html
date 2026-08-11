@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>External Mentions | Ronald Saraswat, PhD</title>
-    <meta name="description" content="Selected third-party institutional and public records documenting Ronald Saraswat's research appointments, doctoral training, science outreach and academic engagement.">
+    <meta name="description" content="Selected third-party institutional, academic and public records documenting Ronald Saraswat's research, doctoral training and science-engagement activities.">
     <meta name="author" content="Ronald Saraswat">
     <meta name="robots" content="index, follow">
 
@@ -14,7 +14,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="External Mentions | Ronald Saraswat, PhD">
-    <meta property="og:description" content="Third-party institutional and public records documenting research appointments, doctoral training, science outreach and academic engagement involving Ronald Saraswat.">
+    <meta property="og:description" content="Third-party institutional, academic and public records documenting research, doctoral training and science engagement involving Ronald Saraswat.">
     <meta property="og:url" content="https://ronald.saraswatintegratedservices.com/mentions/">
     <meta property="og:site_name" content="Ronald Saraswat | Scientific Portfolio">
     <meta property="og:image" content="https://ronald.saraswatintegratedservices.com/assets/images/social-preview.png">
@@ -22,355 +22,404 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="External Mentions | Ronald Saraswat, PhD">
-    <meta name="twitter:description" content="Third-party institutional and public records involving Ronald Saraswat across research, doctoral training and science engagement.">
+    <meta name="twitter:description" content="Third-party institutional, academic and public records documenting research, doctoral training and science engagement involving Ronald Saraswat.">
     <meta name="twitter:image" content="https://ronald.saraswatintegratedservices.com/assets/images/social-preview.png">
 
     <meta name="theme-color" content="#f3f4f0">
     <link rel="stylesheet" href="/css/style.css">
 
-    <!--
-      Mentions-page styles are intentionally embedded here.
-      This keeps the stable site-wide /css/style.css untouched and avoids a second
-      page-specific stylesheet/cache dependency for this single page.
-    -->
+    <!-- Page-specific styles use unique extrec-* classes to avoid collisions with
+         earlier Mentions rules already present in the consolidated site stylesheet. -->
     <style>
-        .mentions-hero .page-hero-inner {
+        .extrec-hero .page-hero-inner {
             max-width: 1120px;
         }
 
-        .mentions-hero h1 {
-            max-width: 1040px;
+        .extrec-hero h1 {
+            max-width: 980px;
         }
 
-        .mentions-section {
-            padding-top: var(--section-space-compact);
+        .extrec-section {
+            padding-top: clamp(58px, 5.4vw, 78px);
         }
 
-        .mentions-header {
+        .extrec-wrap,
+        .extmedia-wrap {
+            width: min(92%, var(--content-width));
+            margin: 0 auto;
+        }
+
+        .extrec-section-head {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.6fr);
+            align-items: end;
+            gap: clamp(34px, 6vw, 88px);
             margin-bottom: 34px;
         }
 
-        .mentions-header > p {
-            max-width: 480px;
+        .extrec-section-head h2,
+        .extmedia-head h2 {
+            max-width: 760px;
+            margin: 0;
+            font-size: clamp(2.25rem, 4.6vw, 4.15rem);
+            font-weight: 620;
+            line-height: 0.98;
+            letter-spacing: -0.055em;
         }
 
-        .mentions-grid {
+        .extrec-section-head > p {
+            max-width: 480px;
+            margin: 0 0 5px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        .extrec-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
         }
 
-        .mention-card {
+        .extrec-item {
             min-width: 0;
         }
 
-        .mention-card--featured {
-            grid-column: 1 / -1;
-        }
-
-        .mention-link {
+        .extrec-link {
             height: 100%;
-            min-height: 318px;
             display: flex;
             flex-direction: column;
             overflow: hidden;
             border: 1px solid var(--border);
-            border-radius: var(--radius-medium);
+            border-radius: 18px;
             background: rgba(255, 255, 255, 0.82);
-            box-shadow: 0 12px 34px rgba(21, 36, 38, 0.05);
             transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
         }
 
-        .mention-link:hover {
+        .extrec-link:hover {
             transform: translateY(-3px);
-            border-color: rgba(49, 92, 89, 0.34);
+            border-color: rgba(49, 92, 89, 0.35);
             background: var(--surface);
-            box-shadow: var(--shadow);
+            box-shadow: 0 18px 42px rgba(21, 36, 38, 0.075);
         }
 
-        .mention-card--featured .mention-link {
-            min-height: 0;
-            display: grid;
-            grid-template-columns: minmax(250px, 0.58fr) minmax(0, 1.42fr);
-            background: var(--surface);
+        .extrec-preview {
+            position: relative;
+            height: 150px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-soft);
+            background: linear-gradient(135deg, rgba(49, 92, 89, 0.095), rgba(255, 255, 255, 0.74));
         }
 
-        .mention-source {
-            min-height: 84px;
-            display: grid;
-            grid-template-columns: auto minmax(0, 1fr);
-            align-items: center;
-            gap: 14px;
-            padding: 17px 19px;
-            border-bottom: 1px solid var(--border);
-            background: rgba(49, 92, 89, 0.045);
+        .extrec-preview--text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px 24px;
         }
 
-        .mention-card--featured .mention-source {
-            height: 100%;
-            align-content: start;
-            padding: clamp(30px, 4vw, 46px);
-            border-right: 1px solid var(--border);
-            border-bottom: 0;
-            background: var(--accent-soft);
-        }
-
-        .mention-mark {
-            width: 44px;
-            height: 44px;
-            display: grid;
-            place-items: center;
-            border: 1px solid rgba(49, 92, 89, 0.24);
+        .extrec-preview--text::before {
+            content: "";
+            position: absolute;
+            width: 96px;
+            height: 96px;
+            right: 22px;
+            top: 18px;
+            border: 1px solid rgba(49, 92, 89, 0.16);
             border-radius: 50%;
-            background: var(--surface);
+        }
+
+        .extrec-preview-code {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 7px;
             color: var(--accent-dark);
-            font-size: 0.62rem;
+            font-size: 0.68rem;
             font-weight: 800;
-            letter-spacing: 0.045em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
         }
 
-        .mention-source strong,
-        .mention-source span {
-            display: block;
-        }
-
-        .mention-source strong {
+        .extrec-preview-source {
+            position: relative;
+            z-index: 1;
+            max-width: 80%;
             color: var(--text-primary);
-            font-size: 0.82rem;
+            font-size: 1.08rem;
             font-weight: 700;
+            line-height: 1.28;
+        }
+
+        .extrec-preview-domain {
+            position: relative;
+            z-index: 1;
+            margin-top: 4px;
+            color: var(--text-muted);
+            font-size: 0.74rem;
             line-height: 1.4;
         }
 
-        .mention-source span {
-            margin-top: 3px;
-            color: var(--text-secondary);
-            font-size: 0.69rem;
-            line-height: 1.45;
+        .extrec-preview--image {
+            background: var(--surface-soft);
         }
 
-        .mention-copy {
+        .extrec-preview--image .extrec-image-fallback {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: var(--accent-dark);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+        }
+
+        .extrec-preview--image img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .extrec-preview--portrait img {
+            object-position: center 31%;
+        }
+
+        .extrec-preview--science img {
+            object-position: center;
+        }
+
+        .extrec-preview--outreach img {
+            object-position: center 42%;
+        }
+
+        .extrec-body {
             flex: 1;
-            padding: 27px 25px 28px;
+            padding: 24px 24px 20px;
         }
 
-        .mention-card--featured .mention-copy {
-            padding: clamp(34px, 4vw, 50px);
-        }
-
-        .mention-type {
-            margin: 0 0 12px;
+        .extrec-kind {
+            display: block;
+            margin-bottom: 10px;
             color: var(--accent);
             font-size: 0.65rem;
             font-weight: 780;
             line-height: 1.4;
-            letter-spacing: 0.085em;
+            letter-spacing: 0.09em;
             text-transform: uppercase;
         }
 
-        .mention-copy h3 {
-            max-width: 760px;
-            margin: 0 0 14px;
+        .extrec-body h3 {
+            margin: 0 0 12px;
             color: var(--text-primary);
-            font-size: clamp(1.34rem, 2vw, 1.95rem);
-            font-weight: 630;
-            line-height: 1.16;
-            letter-spacing: -0.028em;
+            font-size: clamp(1.28rem, 2vw, 1.72rem);
+            font-weight: 640;
+            line-height: 1.14;
+            letter-spacing: -0.03em;
         }
 
-        .mention-card--featured .mention-copy h3 {
-            font-size: clamp(1.75rem, 2.8vw, 2.65rem);
-        }
-
-        .mention-copy > p:not(.mention-type) {
-            max-width: 720px;
+        .extrec-body p {
             margin: 0;
             color: var(--text-secondary);
-            font-size: 0.91rem;
-            line-height: 1.68;
+            font-size: 0.9rem;
+            line-height: 1.62;
         }
 
-        .mention-footer {
+        .extrec-source-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
-            padding: 13px 18px;
-            border-top: 1px solid var(--border);
-            color: var(--text-secondary);
-            font-size: 0.69rem;
-            line-height: 1.45;
+            gap: 18px;
+            margin: 0 24px;
+            padding: 13px 0 15px;
+            border-top: 1px solid var(--border-soft);
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            line-height: 1.4;
         }
 
-        .mention-card--featured .mention-footer {
-            grid-column: 1 / -1;
-        }
-
-        .mention-footer strong {
+        .extrec-source-row strong {
             flex: 0 0 auto;
             color: var(--accent-dark);
+            font-size: 0.72rem;
             font-weight: 760;
         }
 
-        .mentions-media {
-            padding-top: var(--section-space);
+        .extmedia-section {
+            padding-top: clamp(70px, 6.4vw, 96px);
         }
 
-        .media-record {
-            margin-top: 38px;
+        .extmedia-head {
             display: grid;
-            grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+            grid-template-columns: minmax(240px, 0.62fr) minmax(0, 1.18fr);
+            align-items: end;
+            gap: clamp(34px, 6vw, 88px);
+            margin-bottom: 34px;
+        }
+
+        .extmedia-head-copy {
+            max-width: 700px;
+        }
+
+        .extmedia-head-copy p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        .extmedia-card {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
             overflow: hidden;
             border: 1px solid var(--border);
-            border-radius: var(--radius-medium);
+            border-radius: 18px;
             background: var(--surface);
-            box-shadow: 0 14px 38px rgba(21, 36, 38, 0.055);
+            transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
         }
 
-        .media-record-preview {
+        .extmedia-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(49, 92, 89, 0.35);
+            box-shadow: 0 18px 42px rgba(21, 36, 38, 0.075);
+        }
+
+        .extmedia-preview {
             position: relative;
-            min-height: 330px;
+            min-height: 285px;
             overflow: hidden;
             background: var(--dark);
         }
 
-        .media-record-preview img {
+        .extmedia-preview img {
             width: 100%;
             height: 100%;
-            min-height: 330px;
+            min-height: 285px;
             object-fit: cover;
-            opacity: 0.92;
         }
 
-        .media-record-preview::after {
+        .extmedia-preview::after {
             content: "▶";
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: 64px;
-            height: 64px;
+            width: 56px;
+            height: 56px;
             display: grid;
             place-items: center;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.94);
             color: var(--text-primary);
-            font-size: 1.1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+            font-size: 0.95rem;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
         }
 
-        .media-record-copy {
-            padding: clamp(30px, 4vw, 48px);
+        .extmedia-copy {
             align-self: center;
+            padding: clamp(30px, 4vw, 48px);
         }
 
-        .media-record-copy h3 {
-            margin: 0 0 15px;
-            font-size: clamp(1.7rem, 2.7vw, 2.55rem);
-            font-weight: 620;
-            line-height: 1.14;
-            letter-spacing: -0.03em;
+        .extmedia-copy h3 {
+            margin: 0 0 14px;
+            font-size: clamp(1.65rem, 2.5vw, 2.35rem);
+            font-weight: 630;
+            line-height: 1.12;
+            letter-spacing: -0.032em;
         }
 
-        .media-record-copy p {
+        .extmedia-copy > p:not(.extrec-kind) {
             max-width: 640px;
-            margin-bottom: 22px;
+            margin-bottom: 21px;
             color: var(--text-secondary);
         }
 
-        .media-record-copy .text-action {
+        .extmedia-copy .text-action {
             display: inline-flex;
         }
 
         @media (max-width: 900px) {
-            .mentions-grid {
+            .extrec-section-head,
+            .extmedia-head {
+                grid-template-columns: 1fr;
+                align-items: start;
+                gap: 18px;
+            }
+
+            .extrec-section-head h2,
+            .extmedia-head h2 {
+                max-width: 680px;
+            }
+
+            .extrec-section-head > p {
+                max-width: 650px;
+            }
+
+            .extmedia-card {
                 grid-template-columns: 1fr;
             }
 
-            .mention-card--featured {
-                grid-column: auto;
-            }
-
-            .mention-card--featured .mention-link {
-                display: flex;
-            }
-
-            .mention-card--featured .mention-source {
-                height: auto;
-                padding: 17px 19px;
-                border-right: 0;
-                border-bottom: 1px solid var(--border);
-                background: rgba(49, 92, 89, 0.045);
-            }
-
-            .mention-card--featured .mention-copy {
-                padding: 27px 25px 28px;
-            }
-
-            .mention-card--featured .mention-footer {
-                grid-column: auto;
-            }
-
-            .mention-link {
+            .extmedia-preview,
+            .extmedia-preview img {
                 min-height: 0;
+                aspect-ratio: 16 / 8.8;
             }
+        }
 
-            .media-record {
+        @media (max-width: 720px) {
+            .extrec-grid {
                 grid-template-columns: 1fr;
+                gap: 14px;
             }
 
-            .media-record-preview,
-            .media-record-preview img {
-                min-height: 0;
-                aspect-ratio: 16 / 9;
+            .extrec-preview {
+                height: 138px;
+            }
+
+            .extrec-body {
+                padding: 22px 19px 18px;
+            }
+
+            .extrec-source-row {
+                margin: 0 19px;
             }
         }
 
         @media (max-width: 600px) {
-            .mentions-header {
-                margin-bottom: 26px;
+            .extrec-section-head h2,
+            .extmedia-head h2 {
+                font-size: clamp(2.05rem, 10vw, 3rem);
             }
 
-            .mentions-grid {
-                gap: 13px;
-            }
-
-            .mention-source,
-            .mention-card--featured .mention-source {
-                min-height: 0;
-                padding: 14px 15px;
-            }
-
-            .mention-mark {
-                width: 38px;
-                height: 38px;
-                font-size: 0.56rem;
-            }
-
-            .mention-copy,
-            .mention-card--featured .mention-copy {
-                padding: 22px 18px 24px;
-            }
-
-            .mention-copy h3,
-            .mention-card--featured .mention-copy h3 {
-                font-size: clamp(1.28rem, 6.7vw, 1.72rem);
-            }
-
-            .mention-footer {
-                align-items: flex-start;
-                padding: 11px 14px;
-            }
-
-            .mention-footer span {
-                max-width: 64%;
-            }
-
-            .media-record {
-                margin-top: 28px;
+            .extrec-link,
+            .extmedia-card {
                 border-radius: 14px;
             }
 
-            .media-record-copy {
+            .extrec-preview {
+                height: 124px;
+            }
+
+            .extrec-preview--text {
+                padding: 18px;
+            }
+
+            .extrec-preview-source {
+                max-width: 84%;
+                font-size: 1rem;
+            }
+
+            .extrec-source-row {
+                align-items: flex-start;
+            }
+
+            .extrec-source-row span {
+                max-width: 63%;
+            }
+
+            .extmedia-copy {
                 padding: 24px 20px 26px;
             }
         }
@@ -385,7 +434,7 @@
           "@id": "https://ronald.saraswatintegratedservices.com/mentions/#page",
           "url": "https://ronald.saraswatintegratedservices.com/mentions/",
           "name": "External Mentions | Ronald Saraswat, PhD",
-          "description": "Selected third-party institutional and public records documenting Ronald Saraswat's research appointments, doctoral training, science outreach and academic engagement.",
+          "description": "Selected third-party institutional, academic and public records documenting Ronald Saraswat's research, doctoral training and science-engagement activities.",
           "about": { "@id": "https://ronald.saraswatintegratedservices.com/#ronald-saraswat" },
           "isPartOf": { "@id": "https://ronald.saraswatintegratedservices.com/#website" }
         },
@@ -439,139 +488,212 @@
 </header>
 
 <main id="main-content">
-    <section class="page-hero mentions-hero">
+    <section class="page-hero extrec-hero">
         <div class="page-hero-inner">
             <p class="eyebrow">External Mentions</p>
-            <h1>Institutional records and <span>public references.</span></h1>
+            <h1>External records of research and <span>scientific engagement.</span></h1>
             <p class="page-hero-intro">
-                Selected third-party sources documenting research appointments, doctoral training,
-                science outreach and academic engagement. Self-authored material is excluded.
+                Selected third-party institutional, academic and public sources that identify or document
+                my research, training and science-engagement activities. Self-authored material is not included.
             </p>
         </div>
     </section>
 
-    <section class="section section-alt mentions-section" aria-labelledby="named-records-heading">
-        <div class="section-header mentions-header">
-            <div>
-                <p class="eyebrow">Named Records</p>
-                <h2 id="named-records-heading">Records that identify Ronald Saraswat by name.</h2>
+    <section class="section section-alt extrec-section" aria-labelledby="selected-records-heading">
+        <div class="extrec-wrap">
+            <header class="extrec-section-head">
+                <div>
+                    <p class="eyebrow">Selected Records</p>
+                    <h2 id="selected-records-heading">Institutional and public sources.</h2>
+                </div>
+                <p>Recent research records are followed by earlier doctoral, university and science-engagement references.</p>
+            </header>
+
+            <div class="extrec-grid" role="list">
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://www.unimedizin-mainz.de/transmed/news.html" target="_blank" rel="noopener noreferrer" aria-label="View TransMed doctoral thesis completion record">
+                        <div class="extrec-preview extrec-preview--image extrec-preview--portrait">
+                            <span class="extrec-image-fallback">TransMed</span>
+                            <img src="https://www.unimedizin-mainz.de/fileadmin/_processed_/2/1/csm_Saraswald_Ronald_neu_b08aff931b.jpg" alt="Image accompanying the TransMed doctoral thesis completion notice" loading="lazy" onerror="this.remove()">
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">Doctoral record · 6 February 2025</span>
+                            <h3>Ronald Saraswat: Completion of doctoral thesis</h3>
+                            <p>TransMed notice recording successful completion of my PhD and the dissertation title.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>unimedizin-mainz.de</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://u-paris.fr/language/en/the-lavieu-lab/" target="_blank" rel="noopener noreferrer" aria-label="View Université Paris Cité Lavieu Lab page">
+                        <div class="extrec-preview extrec-preview--image extrec-preview--science">
+                            <span class="extrec-image-fallback">Université Paris Cité</span>
+                            <img src="https://u-paris.fr/wp-content/uploads/2020/11/v%C3%A9sicules.png" alt="Extracellular-vesicle figure from the Université Paris Cité Lavieu Lab page" loading="lazy" onerror="this.remove()">
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">Postdoctoral appointment · 2025–2026</span>
+                            <h3>The Lavieu Lab</h3>
+                            <p>Université Paris Cité laboratory page listing me as a postdoctoral researcher during my fixed-term appointment in the Lavieu Lab.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>u-paris.fr</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://nabi.u-paris-sciences.fr/people/" target="_blank" rel="noopener noreferrer" aria-label="View NABI people and alumni page">
+                        <div class="extrec-preview extrec-preview--text">
+                            <span class="extrec-preview-code">NABI</span>
+                            <span class="extrec-preview-source">People and alumni</span>
+                            <span class="extrec-preview-domain">nabi.u-paris-sciences.fr</span>
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">Research affiliation · Alumni</span>
+                            <h3>NABI postdoctoral alumni</h3>
+                            <p>NABI alumni page listing me among former postdoctoral researchers.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>NABI · Université Paris Cité</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://www.unimedizin-mainz.de/transmed/people/alumni-doctoral-candidates.html" target="_blank" rel="noopener noreferrer" aria-label="View TransMed doctoral alumni record">
+                        <div class="extrec-preview extrec-preview--text">
+                            <span class="extrec-preview-code">TransMed</span>
+                            <span class="extrec-preview-source">Alumni Doctoral Candidates</span>
+                            <span class="extrec-preview-domain">unimedizin-mainz.de</span>
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">Doctoral alumni register · 2023 cohort</span>
+                            <h3>Alumni Doctoral Candidates</h3>
+                            <p>TransMed alumni register listing me in the 2023 doctoral cohort together with the dissertation title.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>Mainz Research School of Translational Biomedicine</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://c2vn.univ-amu.fr/equipes-2/equipe-3-endothelium-cellules-circulantes-et-pathologies-vasculaires/" target="_blank" rel="noopener noreferrer" aria-label="View C2VN research team page">
+                        <div class="extrec-preview extrec-preview--text">
+                            <span class="extrec-preview-code">C2VN</span>
+                            <span class="extrec-preview-source">Endothelium, Circulating Cells and Vascular Pathologies</span>
+                            <span class="extrec-preview-domain">c2vn.univ-amu.fr</span>
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">Doctoral affiliation · Aix-Marseille Université</span>
+                            <h3>C2VN research team</h3>
+                            <p>C2VN team page listing me among doctoral researchers in the vascular research group.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>Aix-Marseille Université · C2VN</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://www.deutsche-digitale-bibliothek.de/item/WM5VXUBYUSAM4UIBTADPJY3XHXLOPVZK" target="_blank" rel="noopener noreferrer" aria-label="View Deutsche Digitale Bibliothek dissertation record">
+                        <div class="extrec-preview extrec-preview--text">
+                            <span class="extrec-preview-code">DDB</span>
+                            <span class="extrec-preview-source">Deutsche Digitale Bibliothek</span>
+                            <span class="extrec-preview-domain">deutsche-digitale-bibliothek.de</span>
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">Dissertation record · 2023</span>
+                            <h3>Doctoral thesis record</h3>
+                            <p>German national bibliographic record for my doctoral thesis, including authorship and the degree-granting universities.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>Deutsche Digitale Bibliothek</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://www.cellexplorers.com/volunteer-testimonials" target="_blank" rel="noopener noreferrer" aria-label="View Cell EXPLORERS volunteer testimonials page">
+                        <div class="extrec-preview extrec-preview--image extrec-preview--outreach">
+                            <span class="extrec-image-fallback">Cell EXPLORERS</span>
+                            <img src="https://static.wixstatic.com/media/a74b8a_5594eb61a7cd46b38f10506169153bdf~mv2_d_1465_1233_s_2.png/v1/fill/w_744,h_624,al_c,q_85,enc_avif,quality_auto/a74b8a_5594eb61a7cd46b38f10506169153bdf~mv2_d_1465_1233_s_2.png" alt="Cell EXPLORERS image associated with the NUI Galway October Open Day 2016 volunteer record" loading="lazy" onerror="this.remove()">
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">Science outreach · October 2016</span>
+                            <h3>Volunteer Testimonials</h3>
+                            <p>Cell EXPLORERS identifies me as a volunteer demonstrating the Fantastic DNA! activity at the NUI Galway Open Day.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>Cell EXPLORERS · University of Galway</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://nuiginternational.wordpress.com/2017/02/22/a-day-in-the-life-ronald-saraswat/" target="_blank" rel="noopener noreferrer" aria-label="View NUI Galway International A Day in the Life feature">
+                        <div class="extrec-preview extrec-preview--text">
+                            <span class="extrec-preview-code">NUI Galway International</span>
+                            <span class="extrec-preview-source">A Day in the Life – Ronald Saraswat</span>
+                            <span class="extrec-preview-domain">nuiginternational.wordpress.com</span>
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">University feature · 22 February 2017</span>
+                            <h3>A Day in the Life – Ronald Saraswat</h3>
+                            <p>NUI Galway International feature introducing me as an MSc Neuropharmacology student and presenting my student-life video.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>NUI Galway International</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://nuiginternational.wordpress.com/2017/04/24/student-life-during-exams/" target="_blank" rel="noopener noreferrer" aria-label="View NUI Galway International Student Life During Exams feature">
+                        <div class="extrec-preview extrec-preview--text">
+                            <span class="extrec-preview-code">NUI Galway International</span>
+                            <span class="extrec-preview-source">Student Life During Exams</span>
+                            <span class="extrec-preview-domain">nuiginternational.wordpress.com</span>
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">University feature · 24 April 2017</span>
+                            <h3>Student Life During Exams</h3>
+                            <p>NUI Galway International feature presenting my exam-period student-life video.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>NUI Galway International</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
+
+                <article class="extrec-item" role="listitem">
+                    <a class="extrec-link" href="https://www.facebook.com/globalgaillimh/photos/ronald-saraswat-representing-nui-galway-at-the-student-ambassador-awards-in-farm/1283578751677825/" target="_blank" rel="noopener noreferrer" aria-label="View Global Galway Student Ambassador Awards post">
+                        <div class="extrec-preview extrec-preview--text">
+                            <span class="extrec-preview-code">Global Galway · Facebook</span>
+                            <span class="extrec-preview-source">Student Ambassador Awards</span>
+                            <span class="extrec-preview-domain">facebook.com/globalgaillimh</span>
+                        </div>
+                        <div class="extrec-body">
+                            <span class="extrec-kind">Public institutional post</span>
+                            <h3>Student Ambassador Awards</h3>
+                            <p>Global Galway post identifying me as representing NUI Galway at the Student Ambassador Awards.</p>
+                        </div>
+                        <div class="extrec-source-row"><span>Global Galway</span><strong>View original ↗</strong></div>
+                    </a>
+                </article>
             </div>
-            <p>Original institutional and public sources, presented as concise link previews.</p>
-        </div>
-
-        <div class="mentions-grid" role="list">
-            <article class="mention-card mention-card--featured" role="listitem">
-                <a class="mention-link" href="https://www.unimedizin-mainz.de/transmed/news.html" target="_blank" rel="noopener noreferrer" aria-label="Open TransMed doctoral thesis completion record">
-                    <div class="mention-source">
-                        <span class="mention-mark">TM</span>
-                        <div><strong>Mainz Research School of Translational Biomedicine</strong><span>unimedizin-mainz.de · 06 February 2025</span></div>
-                    </div>
-                    <div class="mention-copy">
-                        <p class="mention-type">Doctoral record</p>
-                        <h3>Ronald Saraswat: Completion of doctoral thesis</h3>
-                        <p>Institutional notice confirming completion of the doctoral thesis and recording the thesis title.</p>
-                    </div>
-                    <div class="mention-footer"><span>University Medical Center Mainz</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://www.unimedizin-mainz.de/transmed/people/alumni-doctoral-candidates.html" target="_blank" rel="noopener noreferrer" aria-label="Open TransMed doctoral alumni record">
-                    <div class="mention-source"><span class="mention-mark">TM</span><div><strong>Mainz Research School of Translational Biomedicine</strong><span>unimedizin-mainz.de · 2023 cohort</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">Doctoral alumni register</p><h3>Alumni Doctoral Candidates</h3><p>Institutional alumni record listing Ronald Saraswat, PhD, with the doctoral thesis title.</p></div>
-                    <div class="mention-footer"><span>University Medical Center Mainz</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://u-paris.fr/language/en/the-lavieu-lab/" target="_blank" rel="noopener noreferrer" aria-label="Open Université Paris Cité Lavieu Lab page">
-                    <div class="mention-source"><span class="mention-mark">UPC</span><div><strong>Université Paris Cité</strong><span>u-paris.fr · Laboratory profile</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">Postdoctoral appointment</p><h3>The Lavieu Lab</h3><p>University laboratory profile listing Ronald Saraswat, PhD, in the postdoctoral team during the 2025–2026 appointment.</p></div>
-                    <div class="mention-footer"><span>Université Paris Cité</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://nabi.u-paris-sciences.fr/people/" target="_blank" rel="noopener noreferrer" aria-label="Open NABI people and alumni page">
-                    <div class="mention-source"><span class="mention-mark">NABI</span><div><strong>NABI</strong><span>nabi.u-paris-sciences.fr · Alumni</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">Research affiliation</p><h3>People and alumni</h3><p>NABI alumni record listing Ronald Saraswat, PhD, among former postdoctoral researchers.</p></div>
-                    <div class="mention-footer"><span>NABI · Université Paris Cité</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://c2vn.univ-amu.fr/equipes-2/equipe-3-endothelium-cellules-circulantes-et-pathologies-vasculaires/" target="_blank" rel="noopener noreferrer" aria-label="Open C2VN research team page">
-                    <div class="mention-source"><span class="mention-mark">C2VN</span><div><strong>C2VN · Aix-Marseille Université</strong><span>c2vn.univ-amu.fr · Research team</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">Doctoral affiliation</p><h3>Endothelium, Circulating Cells and Vascular Pathologies</h3><p>C2VN team record listing Saraswat Ronald among the doctoral researchers in the vascular research group.</p></div>
-                    <div class="mention-footer"><span>Aix-Marseille Université · C2VN</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://www.deutsche-digitale-bibliothek.de/item/WM5VXUBYUSAM4UIBTADPJY3XHXLOPVZK" target="_blank" rel="noopener noreferrer" aria-label="Open Deutsche Digitale Bibliothek dissertation record">
-                    <div class="mention-source"><span class="mention-mark">DDB</span><div><strong>Deutsche Digitale Bibliothek</strong><span>deutsche-digitale-bibliothek.de · 2023</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">Dissertation record</p><h3>Role of endothelial extracellular vesicles in the propagation of pro-senescent signals and thrombo-inflammation</h3><p>National bibliographic record identifying Ronald Saraswat as author and recording the degree-granting universities.</p></div>
-                    <div class="mention-footer"><span>Deutsche Digitale Bibliothek</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://www.cellexplorers.com/volunteer-testimonials" target="_blank" rel="noopener noreferrer" aria-label="Open Cell EXPLORERS volunteer testimonials page">
-                    <div class="mention-source"><span class="mention-mark">CE</span><div><strong>Cell EXPLORERS</strong><span>cellexplorers.com · October 2016</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">Science outreach</p><h3>Volunteer Testimonials</h3><p>Cell EXPLORERS identifies Ronald Saraswat as a volunteer demonstrating the Fantastic DNA! activity at the NUI Galway Open Day.</p></div>
-                    <div class="mention-footer"><span>Cell EXPLORERS · University of Galway</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://nuiginternational.wordpress.com/2017/02/22/a-day-in-the-life-ronald-saraswat/" target="_blank" rel="noopener noreferrer" aria-label="Open NUI Galway International A Day in the Life feature">
-                    <div class="mention-source"><span class="mention-mark">NUIG</span><div><strong>NUI Galway International</strong><span>nuiginternational.wordpress.com · 22 February 2017</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">University feature</p><h3>A Day in the Life – Ronald Saraswat</h3><p>University feature introducing Ronald Saraswat as an international MSc Neuropharmacology student at NUI Galway.</p></div>
-                    <div class="mention-footer"><span>NUI Galway International</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://nuiginternational.wordpress.com/2017/04/24/student-life-during-exams/" target="_blank" rel="noopener noreferrer" aria-label="Open NUI Galway International Student Life During Exams feature">
-                    <div class="mention-source"><span class="mention-mark">NUIG</span><div><strong>NUI Galway International</strong><span>nuiginternational.wordpress.com · 24 April 2017</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">University feature</p><h3>Student Life During Exams</h3><p>NUI Galway International feature identifying Ronald Saraswat as an MSc Neuropharmacology student.</p></div>
-                    <div class="mention-footer"><span>NUI Galway International</span><strong>Open source ↗</strong></div>
-                </a>
-            </article>
-
-            <article class="mention-card" role="listitem">
-                <a class="mention-link" href="https://www.facebook.com/globalgaillimh/photos/ronald-saraswat-representing-nui-galway-at-the-student-ambassador-awards-in-farm/1283578751677825/" target="_blank" rel="noopener noreferrer" aria-label="Open Global Galway Student Ambassador Awards post">
-                    <div class="mention-source"><span class="mention-mark">GG</span><div><strong>Global Galway</strong><span>Facebook · Student Ambassador Awards</span></div></div>
-                    <div class="mention-copy"><p class="mention-type">Public institutional post</p><h3>Student Ambassador Awards</h3><p>Global Galway post identifying Ronald Saraswat as representing NUI Galway at the Student Ambassador Awards.</p></div>
-                    <div class="mention-footer"><span>Global Galway</span><strong>Open post ↗</strong></div>
-                </a>
-            </article>
         </div>
     </section>
 
-    <section class="section mentions-media" aria-labelledby="external-media-heading">
-        <div class="section-grid">
-            <div class="section-heading">
-                <p class="eyebrow">External Media</p>
-                <h2 id="external-media-heading">Education in Ireland.</h2>
-            </div>
-            <div class="section-content">
-                <p class="large-copy">International Student Ambassador programme video featuring my participation.</p>
-                <p>The video is included as an external media record rather than a named textual reference.</p>
-            </div>
-        </div>
+    <section class="section extmedia-section" aria-labelledby="external-media-heading">
+        <div class="extmedia-wrap">
+            <header class="extmedia-head">
+                <div>
+                    <p class="eyebrow">External Media</p>
+                    <h2 id="external-media-heading">Education in Ireland.</h2>
+                </div>
+                <div class="extmedia-head-copy">
+                    <p>International Student Ambassador programme video in which I appear as an NUI Galway student ambassador.</p>
+                </div>
+            </header>
 
-        <a class="media-record" href="https://www.youtube.com/watch?v=_SB_0lN82is" target="_blank" rel="noopener noreferrer" aria-label="Open Education in Ireland International Student Ambassador programme video on YouTube">
-            <div class="media-record-preview">
-                <img src="https://i.ytimg.com/vi/_SB_0lN82is/hqdefault.jpg" alt="Preview image for the Education in Ireland International Student Ambassador programme video" loading="lazy">
-            </div>
-            <div class="media-record-copy">
-                <p class="mention-type">Education in Ireland · YouTube</p>
-                <h3>International Student Ambassador programme</h3>
-                <p>External programme video in which I appear as an NUI Galway international student ambassador.</p>
-                <span class="text-action">View on YouTube <span aria-hidden="true">↗</span></span>
-            </div>
-        </a>
+            <a class="extmedia-card" href="https://www.youtube.com/watch?v=_SB_0lN82is" target="_blank" rel="noopener noreferrer" aria-label="View Education in Ireland International Student Ambassador programme video on YouTube">
+                <div class="extmedia-preview">
+                    <img src="https://i.ytimg.com/vi/_SB_0lN82is/hqdefault.jpg" alt="Preview image for the Education in Ireland International Student Ambassador programme video" loading="lazy">
+                </div>
+                <div class="extmedia-copy">
+                    <p class="extrec-kind">Education in Ireland · YouTube</p>
+                    <h3>International Student Ambassador programme</h3>
+                    <p>External programme video documenting the national student-ambassador initiative and my participation.</p>
+                    <span class="text-action">View on YouTube <span aria-hidden="true">↗</span></span>
+                </div>
+            </a>
+        </div>
     </section>
 
     <section class="page-next">
