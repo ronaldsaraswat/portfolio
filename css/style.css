@@ -1,7 +1,7 @@
 /* =========================================================
    RONALD SARASWAT — SCIENTIFIC PORTFOLIO
    FINAL MASTER STYLESHEET
-   Version 25 — CONSOLIDATED MASTER + EXTERNAL MENTIONS
+   Version 26 — DENSITY + SCIENTIFIC TOOLS CONSOLIDATION
    August 2026
 ========================================================= */
 
@@ -42,16 +42,16 @@
 
     --section-space:
         clamp(
-            70px,
-            6.4vw,
-            96px
+            52px,
+            4.6vw,
+            72px
         );
 
     --section-space-compact:
         clamp(
-            56px,
-            5.3vw,
-            78px
+            40px,
+            3.8vw,
+            58px
         );
 
     --shadow:
@@ -457,15 +457,14 @@ textarea:focus-visible {
             var(--content-width)
         );
 
-    min-height:
-        calc(100svh - 76px);
+    min-height: 0;
 
     margin: 0 auto;
 
     padding:
-        clamp(68px, 7vw, 100px)
+        clamp(50px, 5vw, 72px)
         0
-        clamp(78px, 8vw, 112px);
+        clamp(56px, 5.4vw, 78px);
 
     display: flex;
     align-items: center;
@@ -507,9 +506,9 @@ textarea:focus-visible {
 
     font-size:
         clamp(
-            3.6rem,
-            6.15vw,
-            6.35rem
+            3.2rem,
+            5.2vw,
+            5.4rem
         );
 
     font-weight: 650;
@@ -530,9 +529,9 @@ textarea:focus-visible {
 
     font-size:
         clamp(
-            1.22rem,
-            1.9vw,
-            1.72rem
+            1.08rem,
+            1.5vw,
+            1.38rem
         );
 
     line-height: 1.45;
@@ -576,7 +575,7 @@ textarea:focus-visible {
     position: relative;
 
     min-width: 0;
-    min-height: 560px;
+    min-height: 470px;
 
     display: grid;
     place-items: center;
@@ -592,7 +591,7 @@ textarea:focus-visible {
         );
 
     max-width: none;
-    max-height: 570px;
+    max-height: 485px;
 
     margin:
         0
@@ -624,9 +623,9 @@ textarea:focus-visible {
     margin: 0 auto;
 
     padding:
-        clamp(84px, 8.5vw, 122px)
+        clamp(62px, 6.2vw, 86px)
         0
-        clamp(72px, 7vw, 100px);
+        clamp(50px, 5vw, 70px);
 
     border-bottom:
         1px solid
@@ -647,9 +646,9 @@ textarea:focus-visible {
 
     font-size:
         clamp(
-            3.65rem,
-            6.8vw,
-            6.65rem
+            3rem,
+            5.4vw,
+            5.45rem
         );
 
     font-weight: 620;
@@ -670,9 +669,9 @@ textarea:focus-visible {
 
     font-size:
         clamp(
-            1.18rem,
-            1.8vw,
-            1.58rem
+            1.04rem,
+            1.45vw,
+            1.34rem
         );
 
     line-height: 1.52;
@@ -744,9 +743,9 @@ textarea:focus-visible {
 
     gap:
         clamp(
-            48px,
-            7.2vw,
-            105px
+            34px,
+            5.2vw,
+            72px
         );
 
     align-items: start;
@@ -763,9 +762,9 @@ textarea:focus-visible {
 
     font-size:
         clamp(
-            2.55rem,
-            4.25vw,
-            4.55rem
+            2.05rem,
+            3.4vw,
+            3.55rem
         );
 
     font-weight: 600;
@@ -801,9 +800,9 @@ textarea:focus-visible {
 
     font-size:
         clamp(
-            1.5rem,
-            2.35vw,
-            2.15rem
+            1.22rem,
+            1.75vw,
+            1.62rem
         )
         !important;
 
@@ -906,9 +905,9 @@ textarea:focus-visible {
 
     margin-bottom:
         clamp(
-            40px,
-            4.5vw,
-            58px
+            30px,
+            3.5vw,
+            42px
         );
 }
 
@@ -1133,7 +1132,7 @@ textarea:focus-visible {
 }
 
 .research-card {
-    min-height: 260px;
+    min-height: 205px;
 
     display: flex;
     flex-direction: column;
@@ -1141,9 +1140,9 @@ textarea:focus-visible {
 
     padding:
         clamp(
-            26px,
-            3.3vw,
-            40px
+            22px,
+            2.4vw,
+            30px
         );
 
     border:
@@ -4479,9 +4478,9 @@ p:not(.eyebrow) {
 
     padding:
         clamp(
-            72px,
-            7vw,
-            96px
+            52px,
+            5vw,
+            70px
         )
         5%;
 
@@ -4510,9 +4509,9 @@ p:not(.eyebrow) {
 
     font-size:
         clamp(
-            2.7rem,
-            5vw,
-            5.1rem
+            2.15rem,
+            3.7vw,
+            3.8rem
         );
 
     font-weight: 590;
@@ -4818,9 +4817,9 @@ figcaption {
         min-height: auto;
 
         padding:
-            72px
+            58px
             0
-            86px;
+            64px;
     }
 
     .hero-grid {
@@ -4872,9 +4871,9 @@ figcaption {
         width: 90%;
 
         padding:
-            78px
+            62px
             0
-            82px;
+            66px;
     }
 
     .page-hero h1 {
@@ -4891,7 +4890,7 @@ figcaption {
     .section-dark,
     .communication-section {
         padding:
-            78px
+            60px
             5%;
     }
 
@@ -5233,9 +5232,9 @@ figcaption {
         width: 90%;
 
         padding:
-            62px
+            50px
             0
-            70px;
+            56px;
     }
 
     .hero-grid {
@@ -5300,9 +5299,9 @@ figcaption {
 
     .page-hero {
         padding:
-            60px
+            50px
             0
-            68px;
+            56px;
     }
 
     .page-hero h1 {
@@ -5333,7 +5332,7 @@ figcaption {
     .communication-section,
     .section.contact-section {
         padding:
-            64px
+            50px
             5%;
     }
 
@@ -5342,18 +5341,18 @@ figcaption {
     .communication-grid h2 {
         font-size:
             clamp(
-                2.2rem,
-                10.5vw,
-                3.4rem
+                1.9rem,
+                8.8vw,
+                2.8rem
             );
     }
 
     .large-copy {
         font-size:
             clamp(
-                1.35rem,
-                6.4vw,
-                1.85rem
+                1.18rem,
+                5.2vw,
+                1.52rem
             )
             !important;
     }
@@ -5915,8 +5914,8 @@ figcaption {
 }
 
 .home-portrait {
-    width: min(100%, 390px);
-    margin: 42px 0 0;
+    width: min(100%, 300px);
+    margin: 28px 0 0;
     overflow: hidden;
     aspect-ratio: 4 / 5;
     border-radius: var(--radius-medium);
@@ -5937,9 +5936,9 @@ figcaption {
 
 .home-community-photo {
     width: min(100%, 1120px);
-    margin: 52px auto 0;
+    margin: 30px auto 0;
     overflow: hidden;
-    aspect-ratio: 16 / 7.2;
+    aspect-ratio: 16 / 6.2;
     border-radius: var(--radius-medium);
     background: var(--surface);
     box-shadow: var(--shadow);
@@ -6299,9 +6298,9 @@ figcaption {
 
 .home-community-photo {
     width: min(100%, 1120px);
-    margin: 52px auto 0;
+    margin: 30px auto 0;
     overflow: hidden;
-    aspect-ratio: 16 / 7.2;
+    aspect-ratio: 16 / 6.2;
     border-radius: var(--radius-medium);
     background: var(--surface);
     box-shadow: var(--shadow);
@@ -6721,3 +6720,278 @@ figcaption {
     }
 }
 
+
+
+/* =========================================================
+   31. V26 — COMPACT HOME + SCIENTIFIC TOOLS
+========================================================= */
+
+.section-compact-home {
+    padding-top: var(--section-space-compact);
+    padding-bottom: var(--section-space-compact);
+}
+
+.home-highlights {
+    width: 100%;
+    padding: clamp(34px, 3.6vw, 50px) max(4%, calc((100vw - var(--content-width)) / 2));
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    background: var(--surface);
+}
+
+.home-highlights-inner {
+    width: min(100%, var(--content-width));
+    margin: 0 auto;
+}
+
+.home-highlights-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 24px;
+}
+
+.home-highlights-heading h2 {
+    max-width: 760px;
+    margin: 0;
+    color: var(--text-primary);
+    font-size: clamp(1.75rem, 2.7vw, 2.7rem);
+    font-weight: 610;
+    letter-spacing: -0.045em;
+    line-height: 1.04;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.highlight-card {
+    min-height: 0;
+    padding: 22px 22px 20px;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-medium);
+    background: var(--background);
+}
+
+.highlight-card-featured {
+    background: var(--accent-soft);
+    border-color: rgba(49, 92, 89, 0.22);
+}
+
+.highlight-kicker {
+    display: block;
+    margin-bottom: 11px;
+    color: var(--accent-dark);
+    font-size: 0.66rem;
+    font-weight: 760;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+}
+
+.highlight-card h3 {
+    margin: 0 0 10px;
+    color: var(--text-primary);
+    font-size: clamp(1.2rem, 1.6vw, 1.55rem);
+    letter-spacing: -0.028em;
+    line-height: 1.12;
+}
+
+.highlight-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+    line-height: 1.6;
+}
+
+.highlight-card .text-action {
+    margin-top: 15px;
+    font-size: 0.78rem;
+}
+
+.home-research-grid .research-card {
+    min-height: 185px;
+}
+
+.home-section-actions {
+    margin-top: 24px;
+}
+
+.compact-activity-list {
+    margin-top: 22px;
+    margin-bottom: 18px;
+}
+
+.inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+}
+
+.inline-actions .text-action {
+    margin-top: 0;
+}
+
+.home-community-compact {
+    padding-top: var(--section-space-compact);
+    padding-bottom: var(--section-space-compact);
+}
+
+.home-tools-section .section-header h2 {
+    max-width: 760px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.tool-card {
+    min-height: 100%;
+    padding: clamp(24px, 2.8vw, 34px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius-medium);
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.tool-card-featured {
+    border-color: rgba(196, 227, 220, 0.36);
+    background: rgba(196, 227, 220, 0.09);
+}
+
+.tool-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+.tool-card-meta span {
+    padding: 5px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    color: var(--publication-accent-light);
+    font-size: 0.62rem;
+    font-weight: 760;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.tool-card h3 {
+    margin: 0 0 13px;
+    color: #fff;
+    font-size: clamp(1.65rem, 2.4vw, 2.35rem);
+    font-weight: 610;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+}
+
+.tool-card p {
+    max-width: 690px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.91rem;
+    line-height: 1.66;
+}
+
+.tool-card p + p {
+    margin-top: 12px;
+}
+
+.tool-card-note {
+    color: rgba(255, 255, 255, 0.64) !important;
+    font-size: 0.83rem !important;
+}
+
+.tool-card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 22px;
+    margin-top: 19px;
+}
+
+.tool-card .text-action {
+    margin-top: 0;
+    color: var(--publication-accent-light);
+}
+
+.tools-grid-light .tool-card {
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.tools-grid-light .tool-card-featured {
+    border-color: rgba(49, 92, 89, 0.23);
+    background: var(--accent-soft);
+}
+
+.tools-grid-light .tool-card-meta span {
+    border-color: var(--border);
+    color: var(--accent-dark);
+}
+
+.tools-grid-light .tool-card h3 {
+    color: var(--text-primary);
+}
+
+.tools-grid-light .tool-card p {
+    color: var(--text-secondary);
+}
+
+.tools-grid-light .tool-card-note {
+    color: var(--text-muted) !important;
+}
+
+.tools-grid-light .tool-card .text-action {
+    color: var(--accent-dark);
+}
+
+.contact-software-card {
+    grid-column: 1 / -1;
+    min-height: 0;
+}
+
+@media (max-width: 900px) {
+    .highlight-grid,
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-highlights-heading {
+        display: block;
+    }
+
+    .home-highlights-heading h2 {
+        margin-top: 4px;
+    }
+
+    .home-portrait {
+        width: min(100%, 260px);
+    }
+}
+
+@media (max-width: 600px) {
+    .home-highlights {
+        padding: 36px 5%;
+    }
+
+    .highlight-grid {
+        gap: 9px;
+    }
+
+    .highlight-card {
+        padding: 19px 18px;
+    }
+
+    .tool-card {
+        padding: 21px 19px;
+    }
+
+    .contact-software-card {
+        grid-column: auto;
+    }
+}
